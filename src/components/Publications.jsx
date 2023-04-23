@@ -1,0 +1,148 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useQuery } from "react-query";
+import testimonial6 from "../assets/testimonials/testimonial-6.jpg";
+import talkBadgeHashnode from "../assets/publications/talk-hashnode-badge.png";
+import warriorBadgeHashnode from "../assets/publications/warrior-hashnode-badge.png";
+import featuredBadgeHashnode from "../assets/publications/featured-hashnode-badge.png";
+import "animate.css";
+import { format } from "date-fns";
+
+const endpoint = "https://api.hashnode.com/";
+
+const ARTICLE_QUERY = `
+  {
+    user(username: "hayleyiscoding") {
+      publication {
+        posts(page: 0) {
+          title 
+          dateFeatured
+          dateAdded
+          slug
+        }
+      }
+    }
+  }`;
+
+const Publications = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById("animate-element");
+      if (element) {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementHeight = element.offsetHeight;
+        const windowHeight = window.innerHeight;
+        if (elementTop < windowHeight - elementHeight / 2) {
+          setAnimate(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const { data, isLoading, error } = useQuery("launches", async () => {
+    return await axios({
+      url: endpoint,
+      method: "POST",
+      data: {
+        query: ARTICLE_QUERY,
+      },
+    }).then((response) => response.data.data);
+  });
+
+  if (isLoading) return "Loading...";
+  if (error) return <div>{error.message}</div>;
+
+  return (
+    <section className="bg-custom-black">
+      <div className="mx-auto max-w-7xl sm:px-6 lg:px-16 px-4">
+        <div className="text-left">
+          <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8 mb-12">
+            <span className="relative inline-block">
+              <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
+              <span className="relative font-semibold">My Publications</span>
+            </span>
+            <br className="block sm:hidden" />
+          </h2>
+        </div>
+
+        <div className="max-w-7xl mx-auto mt-1 sm:mt-5 lg:mt-24 pb-5 lg:flex gap-24 justify-around">
+          <div className="-my-8 divide-y divide-gray-900">
+            {data.user.publication.posts?.map((post) => (
+              <div key={post.id} className="py-6 group">
+                <div className="sm:space-x-6 sm:items-start sm:flex">
+                  <p className="text-lg font-semibold tracking-widest text-white custom-text-shadow uppercase shrink-0">
+                    {/* // Have to parse date string into date object -'new Date' */}
+                    {format(new Date(post.dateAdded), "d MMM yyyy")}
+                  </p>
+                  <p className="mt-4 text-lg font-light text-white transition-all duration-200 transform sm:mt-0 group-hover:translate-x-1">
+                    <a
+                      href={`https://hayleyiscoding.hashnode.dev/${post.slug}`}
+                      target="_blank"
+                      title=""
+                    >
+                      {" "}
+                      {post.title}
+                      <span className="custom-superscript font-normal custom-text-shadow ">
+                        &nbsp;{" "}
+                        {post.dateFeatured ? "* Featured on Hashnode" : ""}
+                      </span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="bg-[#C0c0c0] rotate-6 md:w-[40%] w-[50%] md:flex justify-center align-center rounded-xl m-10 ml-20  mt-16 md:-mt-10 ">
+            <img
+              src={testimonial6}
+              alt="Twitter post announcing article being featured on Hashnode"
+              className="w-full origin-bottom rotate-12 md:ml-15 grayscale rounded-xl "
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        id="animate-element"
+        className={`bg-custom-red h-0.5 my-8 mx-auto w-[80%] md:animate__animated ${
+          animate ? "animate__flip" : ""
+        }`}
+      >
+        <div className="md:flex justify-around align-center gap-5 h-auto w-full md:max-w-7xl my-12 mt-20 mx-auto pt-20">
+          {" "}
+          <div id="target-element" className="md:-mt-0">
+            <img
+              src={talkBadgeHashnode}
+              alt="Talk of the Town HashNode Badge"
+              className="w-full object-cover grayscale rounded-xl contrast-200 md:custom-card-tilt custom-neumorphic-table p-5"
+            />
+          </div>
+          <div className="mt-5 md:mt-20 rotate-img md:ml-3 md:mr-4 ">
+            <img
+              src={warriorBadgeHashnode}
+              alt="Word Warrior HashNode Badge"
+              className="w-full object-cover grayscale contrast-200 rounded-xl p-5 custom-neumorphic-table"
+            />
+          </div>
+          <div className="mt-5 md:mt-0 ">
+            {" "}
+            <img
+              src={featuredBadgeHashnode}
+              alt="Featured on HashNode Badge"
+              className="w-full object-cover grayscale contrast-200 rounded-xl md:custom-card-tilt2 custom-neumorphic-table p-5"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Publications;
