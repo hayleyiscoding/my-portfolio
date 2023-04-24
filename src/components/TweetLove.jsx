@@ -31,7 +31,7 @@ const tweetImages = [
 
 const TweetLove = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto py-24">
       <div className="text-center pt-0 mb-20">
         <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
           <span className="relative inline-block">
@@ -41,15 +41,19 @@ const TweetLove = () => {
           <br className="block sm:hidden" />
         </h2>
       </div>
-      <div className="">
+      <div className="rounded-md">
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry columnsCount={4} gutter="1.25rem">
             {tweetImages.map((image, i) => (
               <img
                 key={i}
                 src={image}
-                style={{ width: "100%", display: "block" }}
-                className="grayscale contrast-200 hover:grayscale-0 rounded-md hover:border-t-8 border-t-8 border-t-white hover:border-t-custom-red"
+                style={{
+                  width: "100%",
+                  display: "block",
+                  borderRadius: "15%",
+                }}
+                className="grayscale contrast-200 hover:grayscale-0 md:rounded-md hover:border-t-8 md:border-t-8 border-t-white hover:border-t-custom-red px-9 md:px-0"
               />
             ))}
           </Masonry>

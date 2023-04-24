@@ -26,23 +26,23 @@ const SecondarySkills = () => {
     SiSass,
   ];
   return (
-    <section className="py-24 sm:py-16 lg:py-28 bg-custom-black">
-      <div className="py-19 sm:px-8 lg:px-12 max-w-7xl mx-auto ">
+    <section className="container mx-auto py-20 lg:py-20 bg-custom-black">
+      <div className="py-19 px-12 lg:px-12">
         <div className="grid max-w-md mx-auto lg:max-w-none grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-4 lg:gap-y-2 place-items-center lg:grid-rows-4">
           {secondarySkillsData.slice(0, 4).map((item, i) => {
             const Icon = icons[i];
             return (
-              <div className="w-[60%] text-center my-3 p-5">
+              <div className="w-[60%] text-center md:my-3 md:p-5">
                 {/* <img
               className="h-10 w-auto mx-auto opacity-70 object-contain"
               src="https://cdn.rareblocks.xyz/collection/bakerstreet/images/logo-cloud/2/logo-liva.png"
               alt=""
             /> */}
                 <div className="flex justify-around items-center p-5 rotate-12 custom-neumorphic-tech">
-                  <div className="text-custom-red">
+                  <div className="text-custom-red mr-4 md:mr-0">
                     <Icon size={20} />
                   </div>
-                  <p className="text-white text-xl w-auto mx-auto font-light">
+                  <p className="text-white text-sm md:text-xl w-auto mx-auto font-light">
                     {item.name}
                   </p>
                 </div>
@@ -61,8 +61,8 @@ const SecondarySkills = () => {
             );
           })}
 
-          <div className="col-span-2 lg:col-span-1 lg:row-span-2 rounded-lg bg-dark-gray">
-            <div className="px-18 py-18 xl:p-10 border border-1 rounded-3xl">
+          <div className="col-span-2 lg:col-span-1 lg:row-span-2 rounded-lg md:mt-0">
+            <div className="px-8 py-24 xl:p-10 border border-1 rounded-3xl m-8">
               <div className="text-center pt-0">
                 <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
                   <span className="relative inline-block">
@@ -72,7 +72,7 @@ const SecondarySkills = () => {
                   <br className="block sm:hidden" />
                 </h2>
               </div>
-              <p className="text-white font-sm font-extralight p-3 mt-8 text-center">
+              <p className="text-white font-sm md:font-md font-extralight p-3 mt-8 text-center text-opacity-70">
                 These are additional skills that I have explored and possess an
                 introductory level of knowledge in.
               </p>
@@ -91,10 +91,12 @@ const SecondarySkills = () => {
               alt=""
             /> */}
                 <div className="flex justify-around items-center p-5 rotate-12 custom-neumorphic-tech">
-                  <div className="text-custom-red">
+                  <div className="text-custom-red mr-4 md:mr-0">
                     <Icon size={20} />
                   </div>
-                  <p className="text-white text-xl font-light">{item.name}</p>
+                  <p className="text-white font-light text-sm md:text-xl">
+                    {item.name}
+                  </p>
                 </div>
                 {/* <div className="bg-custom-red h-0.5 flex rotate-12">
                   <RiCheckboxBlankFill style={{ color: "white" }} size={5} />

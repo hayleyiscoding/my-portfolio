@@ -4,7 +4,7 @@ import { moreAboutMeData } from "../constants";
 const Achievements = () => {
   return (
     <section className="py-12 bg-custom-black sm:py-16 lg:py-20 xl:py-20">
-      <div className=" container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div className=" container px-8 mx-auto sm:px-6 lg:px-8">
         <div className="text-center pt-0">
           <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
             <span className="relative inline-block">

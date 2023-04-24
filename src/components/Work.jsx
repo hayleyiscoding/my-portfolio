@@ -3,7 +3,7 @@ import { workData } from "../constants";
 
 const Work = () => {
   return (
-    <section className="experience lg:flex justify-around align-center max-w-7xl mx-auto mb-24">
+    <section className="container experience lg:flex justify-around align-center mx-auto py-24 px-8">
       <div className="text-center pt-0">
         <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
           <span className="relative inline-block">
@@ -31,7 +31,7 @@ const Work = () => {
               <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
                 {item.place}
               </p>
-              <p className="mb-4 text-sm font-extralight text-white dark:text-gray-400">
+              <p className="mb-4 text-sm md:text-md text-opacity-70 font-extralight text-white dark:text-gray-400">
                 {item.body}
               </p>
             </li>

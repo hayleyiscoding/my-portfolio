@@ -4,16 +4,16 @@ import { projects } from "../constants";
 const Projects = () => {
   return (
     <section className="projects">
-      <div className="container pt-4 pb-0 px-6 mx-auto">
-        <section className="mb-32 text-white text-center">
-          <h2 className="text-3xl md:text-5xl font-extralight text-white md:mt-3 text-center mb-8">
+      <div className="container px-6 mx-auto py-24">
+        <section className="text-white text-opacity-70 text-center">
+          <h2 className="text-5xl md:text-5xl font-extralight text-white md:mt-3 text-center mb-8">
             <span className="relative inline-block">
               <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
-              <span className="relative font-semibold">My Projects</span>
+              <span className="relative font-semibold">Projects</span>
             </span>
             <br className="block sm:hidden" />
           </h2>
-          <p className="mt-12 mb-12 text-sm font-light leading-6 text-white text-opacity-70 max-w-md mx-auto ">
+          <p className="mt-12 mb-12 text-sm md:text-md font-light leading-6 text-white text-opacity-70 max-w-md mx-auto ">
             {" "}
             I have completed a number of projects - from a simple web2
             e-commerce app to full-stack decentralised apps built with
@@ -21,7 +21,7 @@ const Projects = () => {
             experience with Next.js, some Typescript and Solidity.
           </p>
 
-          <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
+          <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12 text-sm md:text-md text-opacity-70">
             {projects.map((project) => (
               <div
                 key={project.id}
@@ -57,7 +57,7 @@ const Projects = () => {
                     {project.name}&nbsp;
                     <span className="custom-superscript">{project.type}</span>
                   </h5>
-                  <p className="mb-4 pb-2 text-md font-extralight">
+                  <p className="mb-4 pb-2 text-md font-extralight text-opacity-70">
                     {project.about}
                   </p>
                   <p className="mb-2 pb-2 text-white text-sm font-extralight custom-text-shadow">

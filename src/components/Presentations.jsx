@@ -4,19 +4,21 @@ import womenWeb3Presentation from "../assets/projects/women-web3-presentation.pn
 
 const Presentations = () => {
   return (
-    <section className="py-20 bg-custom-black sm:py-16 lg:py-6 mb-10 mt-96">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <section className="bg-custom-black sm:py-16 lg:py-6 mb-10 mt-96">
+      <div className=" container py-24 px-4 mx-auto sm:px-6 lg:px-8">
         <div className="max-w-md mx-auto text-center">
           <div className="text-center pt-0">
-            <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
+            <h2 className="mt-36 text-5xl font-extralight text-white md:mt-8">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
-                <span className="relative font-semibold">Presentations</span>
+                <span className="relative font-semibold custom-font-ysabeau">
+                  Presentations
+                </span>
               </span>
               <br className="block sm:hidden" />
             </h2>
           </div>
-          <p className="mt-12 text-sm font-light leading-6 text-white text-opacity-70">
+          <p className="mt-12 text-sm md:text-md font-light leading-6 text-white text-opacity-70">
             Video recordings of the final presentations of my projects for the
             3-month Women Build Web3 Accelerator Program (Dec 2022) and the
             Encode Club Solidity Bootcamp (Apr 2023)

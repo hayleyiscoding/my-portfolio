@@ -62,27 +62,31 @@ const Publications = () => {
 
   return (
     <section className="bg-custom-black">
-      <div className="mx-auto max-w-7xl sm:px-6 lg:px-16 px-4">
-        <div className="text-left">
+      <div className="container mx-auto sm:px-6 lg:px-16 px-8 md:py-24">
+        <div className="text-left mb-24">
           <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8 mb-12">
             <span className="relative inline-block">
               <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
-              <span className="relative font-semibold">My Publications</span>
+              {/* Hidden on Mobile */}
+              <span className="relative font-semibold hidden md:visible">
+                Publications
+              </span>
+              <span className="relative font-semibold">Publications</span>
             </span>
             <br className="block sm:hidden" />
           </h2>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-1 sm:mt-5 lg:mt-24 pb-5 lg:flex gap-24 justify-around">
+        <div className="max-w-7xl mx-auto mt-1 sm:mt-5 lg:mt-24 pb-5 lg:flex justify-around">
           <div className="-my-8 divide-y divide-gray-900">
-            {data.user.publication.posts?.map((post) => (
-              <div key={post.id} className="py-6 group">
+            {data.user.publication.posts?.map((post, i) => (
+              <div key={post[i]} className="py-6 group">
                 <div className="sm:space-x-6 sm:items-start sm:flex">
-                  <p className="text-lg font-semibold tracking-widest text-white custom-text-shadow uppercase shrink-0">
+                  <p className="text-md font-semibold tracking-widest text-white custom-text-shadow uppercase shrink-0">
                     {/* // Have to parse date string into date object -'new Date' */}
                     {format(new Date(post.dateAdded), "d MMM yyyy")}
                   </p>
-                  <p className="mt-4 text-lg font-light text-white transition-all duration-200 transform sm:mt-0 group-hover:translate-x-1">
+                  <p className="mt-4 text-md font-light text-white text-opacity-70 transition-all duration-200 transform sm:mt-0 group-hover:translate-x-1">
                     <a
                       href={`https://hayleyiscoding.hashnode.dev/${post.slug}`}
                       target="_blank"
@@ -100,7 +104,7 @@ const Publications = () => {
               </div>
             ))}
           </div>
-          <div className="bg-[#C0c0c0] rotate-6 md:w-[40%] w-[50%] md:flex justify-center align-center rounded-xl m-10 ml-20  mt-16 md:-mt-10 ">
+          <div className="bg-[#C0c0c0] rotate-6 md:w-[40%] w-[60%] md:flex justify-center align-center rounded-xl ml-10 md:ml-20 mt-24 md:-mt-10 ">
             <img
               src={testimonial6}
               alt="Twitter post announcing article being featured on Hashnode"
@@ -115,7 +119,7 @@ const Publications = () => {
           animate ? "animate__flip" : ""
         }`}
       >
-        <div className="md:flex justify-around align-center gap-5 h-auto w-full md:max-w-7xl my-12 mt-20 mx-auto pt-20">
+        <div className="md:flex justify-around align-center gap-5 w-full md:max-w-7xl my-12 mt-20 mx-auto pt-20">
           {" "}
           <div id="target-element" className="md:-mt-0">
             <img

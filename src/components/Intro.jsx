@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-const Hero = () => {
+const Intro = () => {
   const [name, setName] = useState("");
   const [finalName, setFinalName] = useState("");
   const [showInput, setShowInput] = useState(false);
@@ -39,12 +39,13 @@ const Hero = () => {
 
       <div className="bg-custom-black p-6 pt-20 md:p-40">
         {!finalName ? (
-          <div className="bg-custom-black text-white text-center flex-col justify-center items-center">
-            <h1 className="text-4xl font-extralight text-white sm:text-6xl xl:text-8xl pb-2 pl-5 pr-5">
+          <div className="bg-custom-black text-white text-center ">
+            <h1 className="text-4xl font-extralight text-white sm:text-6xl xl:text-8xl pb-2 w-full max-w-7xl">
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("Hi there! 👋")
+                    .pauseFor(2500)
+                    .typeString("Hi there!")
                     .deleteAll()
                     .typeString("What's your name?")
                     .callFunction(() => {
@@ -143,4 +144,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Intro;

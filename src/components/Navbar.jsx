@@ -2,7 +2,7 @@ import React from "react";
 import {
   AiFillGithub,
   AiFillTwitterCircle,
-  AiOutlineMail,
+  AiFillLinkedin,
 } from "react-icons/ai";
 import { SiHashnode } from "react-icons/si";
 
@@ -130,40 +130,44 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <nav className="fixed z-50 right-0 bottom-40 bg-black border-b border-black dark:bg-gray-800 dark:border-gray-700 rounded-xl">
-        <div className="px-1 py-3 lg:px-2 lg:pl-0 ">
+      <nav className="fixed z-50 right-0 bottom-40 bg-black border-b border-black dark:bg-gray-800 dark:border-gray-700 rounded-xl align-left">
+        <div className="px-1 py-2 lg:px-2 lg:pl-0 ">
           <div className="flex">
-            <div className="w-12">
+            <div className="w-7 md:w-7">
               <a
-                href="https://flowbite.com"
-                className="flex ml-2 md:mr-24 mb-2 w-9"
+                href="https://github.com/hayleyiscoding"
+                className="flex ml-1 md:ml-2 md:mr-24 mb-2 w-5 md:w-9"
+                target="_blank"
               >
-                <div className="h-8 bg-custom-red text-white flex justify-center items-center p-2 rounded-xl">
-                  <AiFillGithub size={24} />
+                <div className="h-6 p-1 md:h-8 bg-custom-red text-white flex justify-center items-center rounded-sm">
+                  <AiFillGithub size={20} />
                 </div>
               </a>
               <a
-                href="https://flowbite.com"
-                className="flex ml-2 md:mr-24 mb-2 w-9"
+                href="https://twitter.com/hayleyiscoding"
+                target="_blank"
+                className="flex ml-1 md:ml-2 md:mr-24 mb-2 md:w-9"
               >
-                <div className="h-8 bg-custom-red text-white flex justify-center items-center p-2 rounded-xl">
-                  <AiFillTwitterCircle size={24} />
+                <div className="h-6 p-1 md:h-8 bg-custom-red text-white flex justify-center items-center rounded-sm">
+                  <AiFillTwitterCircle size={20} />
                 </div>
               </a>
               <a
-                href="https://flowbite.com"
-                className="flex ml-2 md:mr-24 mb-2 w-9"
+                href="https://www.linkedin.com/in/hayleyiscoding/"
+                target="_blank"
+                className="flex ml-1 md:ml-2 md:mr-24 mb-2 w-2 md:w-9"
               >
-                <div className="h-8 bg-custom-red text-white flex justify-center items-center p-2 rounded-xl">
-                  <SiHashnode size={24} />
+                <div className="h-6 p-1 md:h-8 bg-custom-red text-white flex justify-between items-center rounded-sm">
+                  <AiFillLinkedin size={20} />
                 </div>
               </a>
               <a
-                href="https://flowbite.com"
-                className="flex ml-2 md:mr-24 mb-2 w-9"
+                href="https://hayleyiscoding.hashnode.dev/"
+                target="_blank"
+                className="flex ml-1 md:ml-2 md:mr-24 w-2 md:w-9"
               >
-                <div className="h-8 bg-custom-red text-white flex justify-center items-center p-2 rounded-xl">
-                  <AiOutlineMail size={24} />
+                <div className="h-6 p-1 md:h-8 bg-custom-red text-white flex justify-center items-center rounded-sm">
+                  <SiHashnode size={20} />
                 </div>
               </a>
             </div>

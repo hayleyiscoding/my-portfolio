@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Hero from "./components/Hero";
-import Home from "./components/Home";
+import Intro from "./components/Intro";
 import Error404 from "./components/Error404";
+import Home from "./components/Home";
 
 import { QueryClient, QueryClientProvider } from "react-query";
 
@@ -13,7 +13,7 @@ function App() {
     <div className="App bg-custom-black">
       <QueryClientProvider client={queryClient}>
         <Routes>
-          <Route path="/" element={<Hero />}></Route>
+          <Route path="/" element={<Intro />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/error" element={<Error404 />}></Route>
         </Routes>
