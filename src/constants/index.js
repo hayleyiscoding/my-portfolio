@@ -25,11 +25,6 @@ export const technologies = [
   },
   {
     id: 3,
-    name: "Tailwind",
-    icon: tailwind,
-  },
-  {
-    id: 4,
     name: "JavaScript",
     icon: javascript,
   },
@@ -39,9 +34,14 @@ export const technologies = [
     icon: reactjs,
   },
   {
-    id: 6,
+    id: 5,
     name: "Git",
     icon: git,
+  },
+  {
+    id: 6,
+    name: "Tailwind",
+    icon: tailwind,
   },
   // {
   //   id: 7,
@@ -446,42 +446,79 @@ export const workshops = [
 export const moreAboutMeData = [
   {
     id: 1,
+    title: "Featured on Hashnode",
     text: `My first web3 article - Web3 For Beginners - was featured on Hashnode.`,
   },
   {
     id: 2,
+    title: "Journalism Superstar NFT",
     text: `I received a "Journalism Superstar" NFT reward during "30 Days of Web3"`,
   },
   {
     id: 3,
-    text: `I have been interviewed on Refinery29.com and CoWorker.com as an expert on remote work`,
+    title: "Interviewed as Remote Work Expert",
+    text: `I have been interviewed on Refinery29.com and CoWorker.com as an expert on working remotely`,
   },
   {
     id: 4,
+    title: "Certificate of Merit (Computer Science)",
     text: `I received a Certificate of Merit for Computer Science at university`,
   },
   {
     id: 5,
+    title: "SuperTutor Award",
     text: `I received a SuperTutor Award - Recognized for outstanding skills as an Online English Instructor`,
   },
   {
     id: 6,
+    title: "Women's Campus Bursary Award",
     text: `I was the recipient of the "Women's Campus Bursary" during my final year at university - awarded to a woman on campus of high integrity and excellence.`,
   },
   {
     id: 7,
+    title: "Advanced Scuba Diving Certification",
     text: `I completed my advanced PADI Scuba Diving Certification in the Phillipines in 2007`,
   },
   {
     id: 8,
+    title: "Promoted to Head Teacher",
     text: `I was promoted to head teacher during my first year of teaching English in South Korea`,
   },
   {
     id: 9,
+    title: "Graduated Summa Cum Laude",
     text: `I graduated my university degree "summa cum laude" - this is with highest honours.`,
   },
   {
     id: 10,
-    text: `I've stood on 7 continents and lived on 6 of them - I have lived in South Africa, Canada, South Korea, Thailand, India, Australia, Ecuador and Peru.`,
+    title: "Stood on 7 Continents",
+    text: `I achieved my dream of standing on 7 continents and I've lived on 6 of them - I have lived in South Africa, Canada, South Korea, Thailand, India, Australia, Ecuador and Peru.`,
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Sally",
+    job: "Founder and Head Coach",
+    company: "Bubble Blowers Swim School",
+    testimonial:
+      "Hayley did an amazing job with our website! She really captured the essence of what Bubble Blowers is all about. My students were so impressed with it and I was able to increase my student numbers dramatically after the website launch.",
+  },
+  {
+    id: 2,
+    name: "Matheus Pagani",
+    job: "Founder and CEO",
+    company: "BFT Solutions",
+    testimonial:
+      "Congratulations, Hayley! You and your team did great in the Bootcamp! Your final project is amazing! Pure 🔥🔥🔥",
+  },
+  {
+    id: 3,
+    name: "Austin Griffith",
+    job: "Builder",
+    company: "SpeedRunEthereum.com",
+    testimonial:
+      "Awesome work getting through the speed run!! Let me know how I can help along the way. Keep building and keep learning",
   },
 ];

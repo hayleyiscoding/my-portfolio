@@ -1,5 +1,5 @@
 import Fireworks from "@fireworks-js/react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Greeting from "./Greeting";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
@@ -14,7 +14,8 @@ const Intro = () => {
   function handleSubmit(event) {
     event.preventDefault();
     if (name !== "") {
-      setFinalName(name);
+      let capitalisedName = `${name.charAt(0).toUpperCase()}${name.slice(0)}`;
+      setFinalName(capitalisedName);
     } else {
       alert(
         "Please write your name. Don't worry, we don't store your data! 😉"
@@ -105,7 +106,7 @@ const Intro = () => {
               <Fireworks
                 options={{
                   acceleration: 1.0,
-                  opacity: 0.1,
+                  opacity: 0.5,
                   lineWidth: {
                     explosion: {
                       min: 0,

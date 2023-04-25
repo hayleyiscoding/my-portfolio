@@ -31,15 +31,26 @@ const Greeting = (props) => {
             {showText ? (
               <div>
                 <h4 className="text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
-                  I'm excited that you're here! How are things in ? I hope you
-                  are having a great day. It
+                  I'm excited that you're here! I hope you are having a great
+                  day.
                   <br />
                   <br />
-                  I just wanted to take moment to thank you for taking a moment
-                  to view my portfolio 🙏 <br />
+                  Thank you for taking a moment to view my portfolio 🙏 <br />
                   <br />
-                  If you're viewing this on desktop, move your mouse to the top
-                  of the red line to see how happy I am about it! <br /> <br />
+                  Hold you mouse at the top of the red line to see how happy I
+                  am about that!
+                  <br /> <br />
+                  And then, let's get started...
+                </h4>
+                <h4 className="lg:hidden text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
+                  I'm excited that you're here! I hope you are having a great
+                  day.
+                  <br />
+                  <br />
+                  Thank you for taking a moment to view my portfolio 🙏 <br />
+                  <br />
+                  Tap your finger around the screen to see how happy I am about
+                  that! <br /> <br />
                   And then, let's get started...
                 </h4>
 

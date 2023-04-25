@@ -13,6 +13,9 @@ import testimonial10 from "../assets/testimonials/testimonial-10.jpg";
 import testimonial11 from "../assets/testimonials/testimonial-11.jpg";
 import testimonial12 from "../assets/testimonials/testimonial-12.jpg";
 import testimonial13 from "../assets/testimonials/testimonial-13.jpg";
+import testimonial14 from "../assets/testimonials/testimonial-14.jpg";
+import testimonial15 from "../assets/testimonials/testimonial-15.jpg";
+import testimonial16 from "../assets/testimonials/testimonial-16.jpg";
 
 const tweetImages = [
   testimonial8,
@@ -26,6 +29,9 @@ const tweetImages = [
   testimonial13,
   testimonial9,
   testimonial4,
+  testimonial15,
+  testimonial14,
+  testimonial16,
   testimonial10,
 ];
 
