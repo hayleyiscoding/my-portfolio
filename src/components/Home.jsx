@@ -4,15 +4,15 @@ import Navbar from "./Navbar";
 import Presentations from "./Presentations";
 import Projects from "./Projects";
 import Publications from "./Publications";
-import Tech from "./Tech";
 import Education from "./Education";
 import Work from "./Work";
 import Workshops from "./Workshops";
 import Contact from "./Contact";
 import TweetLove from "./TweetLove";
 import Achievements from "./Achievements";
-import SecondarySkills from "./SecondarySkills";
 import Testimonials from "./Testimonials";
+import Exploring from "./Exploring";
+import CoreSkills from "./CoreSkills";
 
 const Home = () => {
   return (
@@ -21,9 +21,9 @@ const Home = () => {
 
       <About />
 
-      <Tech />
+      <CoreSkills />
       {/* <hr className="w-[10%] mx-auto" /> */}
-      <SecondarySkills />
+      <Exploring />
       {/* <hr className="w-[10%] mx-auto" /> */}
       <Education />
       {/* <hr className="w-[10%] mx-auto" /> */}

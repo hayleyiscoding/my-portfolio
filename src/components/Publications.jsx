@@ -61,7 +61,7 @@ const Publications = () => {
   if (error) return <div>{error.message}</div>;
 
   return (
-    <section className="bg-custom-black">
+    <section id="publications" className="bg-custom-black">
       <div className="container mx-auto sm:px-6 lg:px-16 px-8 md:py-24">
         <div className="text-left mb-24">
           <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8 mb-12">

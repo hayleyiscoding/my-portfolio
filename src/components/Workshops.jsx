@@ -29,7 +29,7 @@ const Workshops = () => {
   const filteredWorkshops = workshops.filter(filterTable);
 
   return (
-    <section className="workshops">
+    <section id="workshops" className="workshops">
       <div className="container mx-auto py-12 sm:py-16 lg:py-20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center sm:justify-between">

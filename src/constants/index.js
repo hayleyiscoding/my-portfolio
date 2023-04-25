@@ -4,13 +4,13 @@ import css from "../assets/tech/css.png";
 import reactjs from "../assets/tech/reactjs.png";
 import tailwind from "../assets/tech/tailwind.png";
 import git from "../assets/tech/git.png";
-import figma from "../assets/tech/figma.png";
 import onlineCoWork from "../assets/projects/online-cowork.png";
 import crowdfunding from "../assets/projects/crowdfunding.png";
 import onlineCoWorkLottery from "../assets/projects/online-cowork-lottery.png";
 import bubbleBlowers from "../assets/projects/bubbleblowers.png";
 import ecommerce from "../assets/projects/ecommerce.png";
 import gravity from "../assets/projects/gravity.png";
+import portfolio from "../assets/projects/portfolio.png";
 
 export const technologies = [
   {
@@ -114,14 +114,14 @@ export const secondarySkillsData = [
 export const projects = [
   {
     id: 1,
-    name: "Online CoWork",
-    type: "Web2",
+    name: "My Portfolio",
+    type: "Web2 / Web3",
     about:
-      "A platform that I created for my community (women who work online) to advertise their offers, products and services. It includes automation with Zapier/Pabbly, extensive email sequences and all the data is stored in Airtable using the Airtable API.",
-    tech: "#Nextjs #AirtableAPI #Zapier #Mailerlite",
-    url: "https://onlinecowork.com",
-    github: "https://github.com/hayleyiscoding/onlinecowork-makeover-react",
-    image: onlineCoWork,
+      "I had a lot of fun creating this portfolio website! I implemented neumorphic design with Tailwind CSS, React hooks, various libraries such as Masonry, CSS animations that are activated on scroll/hover, Email.js with error handling and fetched data from the Hashnode API using GraphQL.",
+    tech: "#React #HashnodeAPI #GraphQL #Tailwind",
+    url: "https://hayleyiscoding.com",
+    github: "https://github.com/hayleyiscoding/my-portfolio",
+    image: portfolio,
   },
   {
     id: 2,
@@ -271,7 +271,7 @@ export const workData = [
     date: `Jan 2005 - June 2016`,
     title: "English Instructor, Amazon Rainforest Naturalist Guide and Travels",
     place: "Ecuador, Peru, South Korea, etc",
-    body: `I decided after my degree that my next 'education' was to travel the world. In order to do this, I worked various expat jobs, such as guiding in the Amazon Rainforest and teaching English in South Korea. With this income, I was able to visit 7 continents, live on 6 of them and visit over 40 countries. I learned so much about the world - the problems that people are experiencing, technological advances in various countries and especially important soft skills such as how to effectively communicate with people from other cultures.`,
+    body: `I decided after my degree that my next 'education' was to travel the world. In order to do this, I worked various expat jobs, such as guiding in the Amazon Rainforest and teaching English in South Korea. With this income, I was able to visit 7 continents, live on 6 of them and visit over 40 countries. I learned so much about the world - the problems that people are experiencing, technological advancements in various countries and especially important soft skills such as how to effectively communicate with people from other cultures.`,
   },
   {
     id: 2,

@@ -4,7 +4,10 @@ import womenWeb3Presentation from "../assets/projects/women-web3-presentation.pn
 
 const Presentations = () => {
   return (
-    <section className="bg-custom-black sm:py-16 lg:py-6 mb-10 mt-96">
+    <section
+      id="presentations"
+      className="bg-custom-black sm:py-16 lg:py-6 mb-10 mt-96"
+    >
       <div className=" container py-24 px-4 mx-auto sm:px-6 lg:px-8">
         <div className="max-w-md mx-auto text-center">
           <div className="text-center pt-0">

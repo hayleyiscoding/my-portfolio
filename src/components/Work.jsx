@@ -3,7 +3,10 @@ import { workData } from "../constants";
 
 const Work = () => {
   return (
-    <section className="container experience lg:flex justify-around align-center mx-auto py-24 px-8">
+    <section
+      id="work"
+      className="container experience lg:flex justify-around align-center mx-auto py-24 px-8"
+    >
       <div className="text-center pt-0">
         <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
           <span className="relative inline-block">

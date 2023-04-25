@@ -14,7 +14,7 @@ const Intro = () => {
   function handleSubmit(event) {
     event.preventDefault();
     if (name !== "") {
-      let capitalisedName = `${name.charAt(0).toUpperCase()}${name.slice(0)}`;
+      let capitalisedName = `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
       setFinalName(capitalisedName);
     } else {
       alert(

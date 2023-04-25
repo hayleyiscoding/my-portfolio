@@ -3,6 +3,7 @@ import "./App.css";
 import Intro from "./components/Intro";
 import Error404 from "./components/Error404";
 import Home from "./components/Home";
+import Projects from "./components/Projects";
 
 import { QueryClient, QueryClientProvider } from "react-query";
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Intro />}></Route>
           <Route path="/home" element={<Home />}></Route>
+          <Route path="/home/projects" element={<Projects />} />
           <Route path="/error" element={<Error404 />}></Route>
         </Routes>
       </QueryClientProvider>

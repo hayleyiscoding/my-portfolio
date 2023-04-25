@@ -1,9 +1,12 @@
 import React from "react";
 import { technologies } from "../constants/index.js";
 
-const Tech = () => {
+const CoreSkills = () => {
   return (
-    <section className="container mx-auto overflow-hidden bg-custom-black">
+    <section
+      id="core-skills"
+      className="container mx-auto overflow-hidden bg-custom-black"
+    >
       <div className="py-24 pt-0">
         <div className="text-center pt-20 mb-4 md:mb-12">
           <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8 md:pb-8">
@@ -37,4 +40,4 @@ const Tech = () => {
   );
 };
 
-export default Tech;
+export default CoreSkills;

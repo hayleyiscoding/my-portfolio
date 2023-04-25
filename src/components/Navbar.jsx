@@ -1,10 +1,10 @@
-import React from "react";
 import {
   AiFillGithub,
   AiFillTwitterCircle,
   AiFillLinkedin,
 } from "react-icons/ai";
 import { SiHashnode } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -35,19 +35,14 @@ const Navbar = () => {
                   ></path>
                 </svg>
               </button>
-              <a href="https://flowbite.com" className="flex md:mr-24">
-                {/* <img
-                  src="https://flowbite.com/docs/images/logo.svg"
-                  className="h-8 mr-3"
-                  alt="Hayley Wood Logo"
-                /> */}
+              <Link to="/home" className="flex md:mr-24">
                 <div className="h-8 mr-3 ml-2 bg-custom-red text-white p-1">
                   H
                 </div>
                 <span className="text-white self-center tracking-wide font-bold sm:text-md whitespace-nowrap dark:text-white">
                   Hayley | React Developer
                 </span>
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center">
@@ -192,8 +187,8 @@ const Navbar = () => {
             </li> */}
 
             <li className="w-6 h-6">
-              <a
-                href="#"
+              <Link
+                to="/home"
                 className="flex flex-col items-center text-white rounded-lg dark:text-white hover:text-custom-red dark:hover:bg-gray-700 mt-3"
               >
                 {/* <svg
@@ -209,12 +204,12 @@ const Navbar = () => {
                 {/* <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">
                   Pro
                 </span> */}
-              </a>
+              </Link>
             </li>
 
             <li className="w-6 h-18">
-              <a
-                href="#"
+              <Link
+                to="/home#about"
                 className="flex flex-col items-center p-2 text-white rounded-lg dark:text-white hover:text-custom-red dark:hover:bg-gray-700 focus:text-custom-red"
               >
                 {/* <svg
@@ -230,12 +225,12 @@ const Navbar = () => {
                 {/* <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">
                   Pro
                 </span> */}
-              </a>
+              </Link>
             </li>
 
             <li className="w-6 h-14">
-              <a
-                href="#"
+              <Link
+                to="/home#core-skills"
                 className="flex flex-col items-center p-2 text-white rounded-lg dark:text-white hover:text-custom-red dark:hover:bg-gray-700"
               >
                 {/* <svg
@@ -248,16 +243,16 @@ const Navbar = () => {
                   <path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
                   <path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
                 </svg> */}
-                <span className="-rotate-90">Technology</span>
+                <span className="-rotate-90">Core</span>
                 {/* <span className="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
                   3
                 </span> */}
-              </a>
+              </Link>
             </li>
 
             <li className="w-6 h-14">
-              <a
-                href="#"
+              <Link
+                to="#education"
                 className="flex flex-col items-center p-2 text-white rounded-lg dark:text-white hover:text-custom-red  dark:hover:bg-gray-700"
               >
                 {/* <svg
@@ -274,7 +269,7 @@ const Navbar = () => {
                   ></path>
                 </svg> */}
                 <span className="-rotate-90">Education</span>
-              </a>
+              </Link>
             </li>
 
             <li className="w-6 h-12">
@@ -300,8 +295,8 @@ const Navbar = () => {
             </li>
 
             <li className="w-6">
-              <a
-                href="#"
+              <Link
+                to="/home/projects"
                 className="flex flex-col items-center p-2 text-white rounded-lg dark:text-white hover:text-custom-red dark:hover:bg-gray-700"
               >
                 {/* <svg
@@ -318,7 +313,7 @@ const Navbar = () => {
                   ></path>
                 </svg> */}
                 <span className="-rotate-90">Projects</span>
-              </a>
+              </Link>
             </li>
 
             <li className="w-6">

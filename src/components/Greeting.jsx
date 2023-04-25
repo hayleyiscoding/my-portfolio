@@ -20,7 +20,7 @@ const Greeting = (props) => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(`Hi ${props.name}!`)
-                    .pauseFor(2000)
+                    .pauseFor(2500)
                     .callFunction(() => {
                       setShowText(true);
                     })
@@ -42,6 +42,7 @@ const Greeting = (props) => {
                   <br /> <br />
                   And then, let's get started...
                 </h4>
+                {/* Mobile */}
                 <h4 className="lg:hidden text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
                   I'm excited that you're here! I hope you are having a great
                   day.
