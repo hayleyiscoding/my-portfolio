@@ -6,6 +6,8 @@ import {
 import { SiHashnode } from "react-icons/si";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import "animate.css";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -24,19 +26,26 @@ const Navbar = () => {
                 className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Open sidebar</span>
-                <svg
-                  className="w-4 h-6"
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    fill-rule="evenodd"
-                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-                  ></path>
-                </svg>
+                {!showSidebar ? (
+                  <svg
+                    className="w-4 h-6"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      fill-rule="evenodd"
+                      d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                    ></path>{" "}
+                    :
+                  </svg>
+                ) : (
+                  <div className="w-4 h-6 pt-1">
+                    <AiOutlineCloseCircle />
+                  </div>
+                )}
               </button>
               <Link to="/home" className="flex md:mr-24">
                 <div className="h-8 mr-3 ml-3 md:ml-2 bg-custom-red text-white p-1">
@@ -347,7 +356,7 @@ const Navbar = () => {
       {/* mobile menu */}
 
       <div
-        className={`fixed z-10 h-full bg-custom-black dark:bg-custom-black w-[40%] drop-shadow-2xl animate-pulse ${
+        className={`fixed z-10 h-full bg-custom-black dark:bg-custom-black w-screen animate__animated animate__fadeInLeft pt-28 ${
           showSidebar ? "visible md:hidden" : "hidden"
         }`}
       >
