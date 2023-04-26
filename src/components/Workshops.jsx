@@ -217,7 +217,7 @@ const Workshops = () => {
                             </div>
                           </td>
 
-                          <td className="px-4 py-4 lg:table-cell whitespace-nowrap">
+                          <td className="hidden px-4 py-4 lg:table-cell whitespace-nowrap">
                             <div className="flex items-center space-x-4">
                               <a
                                 href={workshop.url}

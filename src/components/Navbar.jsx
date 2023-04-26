@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 z-50 w-full bg-black border-b border-black dark:bg-gray-800 dark:border-gray-700">
-        <div className="px-3 py-3 lg:px-5 lg:pl-0">
+        <div className=" relative px-3 py-3 lg:px-5 lg:pl-0">
           <div className="flex items-center justify-between ">
             <div className="flex items-center justify-start">
               <button
@@ -175,9 +175,7 @@ const Navbar = () => {
 
       <aside
         id="logo-sidebar"
-        className={`fixed hidden top-0 z-40 w-8 h-screen pt-20 transition-transform -translate-x-full bg-black border-r border-black sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 ${
-          showSidebar ? "visible" : "hidden"
-        }`}
+        className="fixed top-0 z-40 w-8 h-screen pt-20 transition-transform -translate-x-full bg-black border-r border-black sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
         <div className="h-full bg-black dark:bg-gray-800">
@@ -349,8 +347,8 @@ const Navbar = () => {
       {/* mobile menu */}
 
       <div
-        className={`h-full bg-custom-black dark:bg-custom-black ${
-          showSidebar ? "md:visible" : "hidden"
+        className={`fixed z-10 h-full bg-custom-black dark:bg-custom-black w-[40%] ${
+          showSidebar ? "visible md:hidden" : "hidden"
         }`}
       >
         <ul className="font-light flex flex-col justify-end space-y-12">
