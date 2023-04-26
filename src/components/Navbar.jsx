@@ -347,7 +347,7 @@ const Navbar = () => {
       {/* mobile menu */}
 
       <div
-        className={`fixed z-10 h-full bg-custom-black dark:bg-custom-black w-[40%] ${
+        className={`fixed z-10 h-full bg-custom-black dark:bg-custom-black w-[40%] drop-shadow-2xl animate-pulse ${
           showSidebar ? "visible md:hidden" : "hidden"
         }`}
       >
