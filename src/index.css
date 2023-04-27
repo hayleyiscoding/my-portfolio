@@ -12,6 +12,9 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+:root {
   --swiper-theme-color: red;
 }
 
@@ -127,6 +130,10 @@ a {
 }
 a:hover {
   --_p: 100%;
+}
+
+aside a {
+  --s: 0em !important;
 }
 
 h5 {
@@ -246,9 +253,9 @@ h5:hover {
   padding-bottom: 3vw;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  display: none;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: hsl(0%, 100%, 50%);
 }
 
 .swiper-pagination-bullet {

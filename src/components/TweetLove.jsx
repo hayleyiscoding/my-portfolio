@@ -39,7 +39,7 @@ const TweetLove = () => {
   return (
     <section id="tweetlove" className="container mx-auto py-24">
       <div className="text-center pt-0 mb-20">
-        <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
+        <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
           <span className="relative inline-block">
             <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
             <span className="relative font-semibold">TweetLove ❤️</span>
@@ -57,9 +57,9 @@ const TweetLove = () => {
                 style={{
                   width: "100%",
                   display: "block",
-                  borderRadius: "5%",
+                  borderRadius: "12%",
                 }}
-                className="grayscale contrast-200 hover:grayscale-0 md:rounded-md hover:border-t-8 md:border-t-8 border-t-white hover:border-t-custom-red px-9 md:px-0"
+                className="grayscale contrast-200 hover:grayscale-0 md:rounded-md hover:border-t-4 md:border-t-4 border-t-white hover:border-t-custom-red px-9 md:px-0"
               />
             ))}
           </Masonry>

@@ -13,38 +13,26 @@ import Achievements from "./Achievements";
 import Testimonials from "./Testimonials";
 import Exploring from "./Exploring";
 import CoreSkills from "./CoreSkills";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
     <div className="bg-custom-black">
       <Navbar />
-
       <About />
-
       <CoreSkills />
-      {/* <hr className="w-[10%] mx-auto" /> */}
       <Exploring />
-      {/* <hr className="w-[10%] mx-auto" /> */}
       <Education />
-      {/* <hr className="w-[10%] mx-auto" /> */}
       <Work />
-      {/* <hr className="w-[10%] mx-auto" /> */}
-
       <Projects />
-      {/* <hr className="w-[10%] mx-auto" /> */}
-
       <Publications />
-
       <Presentations />
-
       <Workshops />
-
       <TweetLove />
-
       <Achievements />
       <Testimonials />
-
       <Contact />
+      <Footer />
     </div>
   );
 };

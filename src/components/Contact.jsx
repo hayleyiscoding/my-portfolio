@@ -39,7 +39,7 @@ const Contact = () => {
       <div className=" container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
           <div className="text-center pt-0 mb-20">
-            <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
+            <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
                 <span className="relative font-semibold">Get in touch!</span>
@@ -49,7 +49,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto mt-12 sm:mt-16">
+        {/* <div className="max-w-3xl mx-auto mt-12 sm:mt-16">
           <div className="grid grid-cols-1 gap-6 px-8 text-center md:px-0 md:grid-cols-2">
             <div className="overflow-hidden bg-custom-black rounded-xl border-1 border-white">
               <div className="p-6 custom-neumorphic-tech">
@@ -63,15 +63,12 @@ const Contact = () => {
                 >
                   hayleyiscoding (at) gmail.com
                 </p>
-                {/* <p className="mt-1 text-lg font-light text-white">
-                  +1-446-526-0117
-                </p> */}
               </div>
             </div>
 
             <div className="overflow-hidden bg-custom-black rounded-xl custom-neumorphic-tech">
-              <div className="p-6 ">
-                <div className="flex-shrink-0 w-10 h-10 mx-auto text-gray-400 pb-16">
+              <div className="p-6">
+                <div className="flex-shrink-0 w-10 h-24 mx-auto text-gray-400 pb-16">
                   {" "}
                   <AiOutlineTwitter size={35} />
                 </div>
@@ -82,105 +79,102 @@ const Contact = () => {
                 >
                   twitter.com/hayleyiscoding
                 </a>
-                {/* <p className="mt-1 text-lg font-light text-white">
-                  hr@example.com
-                </p> */}
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="mt-6 overflow-hidden bg-custom-black rounded-xl">
-            <div className="px-6 py-12 sm:p-12">
-              <form
-                ref={form}
-                onSubmit={sendEmail}
-                className="mt-14 bg-custom-black"
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
-                  <div>
-                    <label
-                      htmlFor="from_name"
-                      className="text-base font-light text-white"
-                    >
-                      {" "}
-                      Your name{" "}
-                    </label>
-                    <div className="mt-2.5 relative">
-                      <input
-                        type="text"
-                        name="from_name"
-                        id="from_name"
-                        placeholder="Enter your name"
-                        className="block w-full px-4 py-4 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="user-email"
-                      className="text-base font-light text-white"
-                    >
-                      {" "}
-                      Email address{" "}
-                    </label>
-                    <div className="mt-2.5 relative">
-                      <input
-                        type="email"
-                        name="user-email"
-                        id="user-email"
-                        placeholder="Enter your email address"
-                        className="block w-full px-4 py-4 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="sm:col-span-2">
-                    <label for="" className="text-base font-light text-white">
-                      {" "}
-                      Message{" "}
-                    </label>
-                    <div className="mt-2.5 relative">
-                      <textarea
-                        name="message"
-                        id="message"
-                        placeholder="Write your message"
-                        className="block w-full font-light px-4 py-4 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md resize-y focus:outline-none focus:border-blue-600 caret-blue-600"
-                        rows="4"
-                        maxLength={500}
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  <div className="sm:col-span-2">
-                    <button
-                      type="submit"
-                      value="Send"
-                      className="red-btn cursor-pointer absolute inline-flex items-center justify-center px-10 py-3 mt-8 font-light leading-5 text-white transition-all duration-200 bg-custom-red border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white text-md"
-                    >
-                      Send
-                      <svg
-                        className="w-6 h-6 ml-2"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M13 7l5 5m0 0l-5 5m5-5H6"
-                        />
-                      </svg>
-                    </button>
+        <div className="mx-auto overflow-hidden bg-custom-black rounded-xl max-w-3xl">
+          <div className="px-6">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="mt-14 bg-custom-black"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-8">
+                <div>
+                  <label
+                    htmlFor="from_name"
+                    className="text-base font-light text-white"
+                  >
+                    {" "}
+                    Your name{" "}
+                  </label>
+                  <div className="mt-2.5 relative">
+                    <input
+                      type="text"
+                      name="from_name"
+                      id="from_name"
+                      placeholder="Enter your name"
+                      className="block w-full px-4 py-4 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                    />
                   </div>
                 </div>
-              </form>
-            </div>
+
+                <div>
+                  <label
+                    htmlFor="user-email"
+                    className="text-base font-light text-white"
+                  >
+                    {" "}
+                    Email address{" "}
+                  </label>
+                  <div className="mt-2.5 relative">
+                    <input
+                      type="email"
+                      name="user-email"
+                      id="user-email"
+                      placeholder="Enter your email address"
+                      className="block w-full px-4 py-4 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                    />
+                  </div>
+                </div>
+
+                <div className="sm:col-span-2">
+                  <label for="" className="text-base font-light text-white">
+                    {" "}
+                    Message{" "}
+                  </label>
+                  <div className="mt-2.5 relative">
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="Write your message"
+                      className="block w-full font-light px-4 py-4 mt-[40px] text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md resize-y focus:outline-none focus:border-blue-600 caret-blue-600"
+                      rows="4"
+                      maxLength={500}
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div className="sm:col-span-2">
+                  <button
+                    type="submit"
+                    value="Send"
+                    className=" cursor-pointer absolute inline-flex items-center justify-center px-10 py-3 mt-8 font-light leading-5 text-white transition-all duration-200 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:text-white  hover:opacity-70 text-md"
+                  >
+                    Send
+                    <svg
+                      className="w-6 h-6 ml-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
+      {/* </div> */}
 
       {/* Notification */}
       {hasEmailSent ? (

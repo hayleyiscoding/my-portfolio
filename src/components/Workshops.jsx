@@ -34,7 +34,7 @@ const Workshops = () => {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center sm:justify-between">
             <div className="text-left pt-0 pb-6">
-              <h2 className=" mt-4 text-5xl font-extralight text-white md:-mt-2">
+              <h2 className=" mt-4 text-4xl md:text-5xl font-extralight text-white md:-mt-2">
                 <span className="relative inline-block">
                   <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
                   <span className="relative font-semibold">Workshops</span>
@@ -43,9 +43,9 @@ const Workshops = () => {
               </h2>
             </div>
 
-            <div className="flex items-center justify-start mt-4 sm:justify-end sm:mt-0 sm:space-x-7">
+            <div className="flex items-center justify-start mt-4 sm:justify-end sm:mt-0 sm:space-x-7 w-full">
               {/* Search bar */}
-              <div className="flex items-center">
+              <div className="flex items-center justify-between">
                 <label htmlFor="simple-search" className="sr-only">
                   Search
                 </label>
@@ -54,7 +54,7 @@ const Workshops = () => {
                     type="text"
                     id="simple-search"
                     onChange={handleSearch}
-                    className="h-8 mt-1 bg-black border border-transparent text-white text-xs rounded-lg block w-full pl-3 p-6 md:p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="h-10 mt-1 bg-black border border-transparent text-white text-xs rounded-lg block w-full pl-3 p-6 md:p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Search"
                     required
                   />
@@ -181,7 +181,7 @@ const Workshops = () => {
                                   <a
                                     href={workshop.url}
                                     target="_blank"
-                                    className="inline-flex items-center px-8 md:px-10 py-1 md:py-2 text-sm font-light text-white transition-all duration-200 bg-custom-red border border-1 border-white rounded-md shadow-sm focus:outline-none hover:text-white hover:opacity-90 focus:ring-2 focus:ring-offset-1 focus:ring-white"
+                                    className="inline-flex items-center px-8 md:px-10 py-1 md:py-2 text-sm font-light text-white transition-all duration-200 bg-black border border-1 border-white rounded-md shadow-sm focus:outline-none hover:text-white hover:opacity-90 focus:ring-2 focus:ring-offset-1 focus:ring-white"
                                   >
                                     Visit
                                   </a>
@@ -222,7 +222,7 @@ const Workshops = () => {
                               <a
                                 href={workshop.url}
                                 target="_blank"
-                                className="inline-flex items-center px-10 py-2 text-sm font-medium text-white transition-all duration-200 bg-custom-red border border-1 border-white rounded-md shadow-sm focus:outline-none hover:text-white hover:opacity-80 focus:ring-2 focus:ring-offset-1 focus:ring-white"
+                                className="inline-flex items-center px-10 py-2 text-sm font-medium text-white transition-all duration-200 bg-black border border-1 border-white rounded-md shadow-sm focus:outline-none hover:text-white hover:opacity-80 focus:ring-2 focus:ring-offset-1 focus:ring-white"
                               >
                                 Visit
                               </a>

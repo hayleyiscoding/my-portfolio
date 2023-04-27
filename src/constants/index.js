@@ -4,13 +4,17 @@ import css from "../assets/tech/css.png";
 import reactjs from "../assets/tech/reactjs.png";
 import tailwind from "../assets/tech/tailwind.png";
 import git from "../assets/tech/git.png";
-import onlineCoWork from "../assets/projects/online-cowork.png";
 import crowdfunding from "../assets/projects/crowdfunding.png";
 import onlineCoWorkLottery from "../assets/projects/online-cowork-lottery.png";
 import bubbleBlowers from "../assets/projects/bubbleblowers.png";
 import ecommerce from "../assets/projects/ecommerce.png";
 import gravity from "../assets/projects/gravity.png";
 import portfolio from "../assets/projects/portfolio.png";
+import austinAvatar from "../assets/testimonials/austin-avatar.png";
+import sallyAvatar from "../assets/testimonials/sally-avatar.png";
+import matheusAvatar from "../assets/testimonials/matheus-avatar.png";
+import camiAvatar from "../assets/testimonials/cami-avatar.png";
+import kristenAvatar from "../assets/testimonials/kristen-avatar.png";
 
 export const technologies = [
   {
@@ -499,34 +503,63 @@ export const moreAboutMeData = [
 export const testimonialData = [
   {
     id: 1,
+    avatar: matheusAvatar,
+    name: "Matheus Pagani",
+    company: "CEO, BFT Solutions",
+    testimonial: `Congratulations @hayleyiscoding! You have 'mined' this NFT with true talent and enduring effort! Super deserved. You are 🔥`,
+  },
+  {
+    id: 2,
+    avatar: sallyAvatar,
     name: "Sally",
-    job: "Founder",
     company: "Bubble Blowers Swim School",
     testimonial:
       "Hayley did an amazing job with our website! She really captured the essence of what Bubble Blowers is all about. My students were so impressed with it and I was able to increase my student numbers dramatically after the website launch.",
   },
   {
-    id: 2,
-    name: "Matheus Pagani",
-    job: "CEO",
-    company: "BFT Solutions",
-    testimonial:
-      "Congratulations, Hayley! You and your team did great in the Bootcamp! Your final project is amazing! Pure 🔥🔥🔥",
-  },
-  {
     id: 3,
+    avatar: austinAvatar,
     name: "Austin Griffith",
-    job: "Builder",
     company: "SpeedRunEthereum.com",
     testimonial:
-      "Awesome work getting through the speed run!! Let me know how I can help along the way. Keep building and keep learning",
+      "Awesome work getting through the speed run!! Let me know how I can help along the way. Keep building and keep learning!",
   },
   {
     id: 4,
-    name: "Alexh",
-    job: "Builder",
+    avatar: camiAvatar,
+    name: "Cami",
+    company: "Head of DevRel, Fuel Network",
+    testimonial: "👏👏👏👏 Proud of you!",
+  },
+  {
+    id: 5,
+    avatar: kristenAvatar,
+    name: "Kristen",
+    company: "Women Build Web3",
+    testimonial:
+      "Hayley, holy smokes! This was such an awesome article to read... You've got yourself a new Hashnode subscriber :D",
+  },
+  {
+    id: 6,
+    avatar: camiAvatar,
+    name: "Cami",
+    company: "Head of DevRel, Fuel Network",
+    testimonial: "👏👏👏👏 Proud of you!",
+  },
+  {
+    id: 7,
+    avatar: kristenAvatar,
+    name: "Kristen",
+    company: "Women Build Web3",
+    testimonial:
+      "Hayley, holy smokes! This was such an awesome article to read... You've got yourself a new Hashnode subscriber :D",
+  },
+  {
+    id: 8,
+    avatar: austinAvatar,
+    name: "Austin Griffith",
     company: "SpeedRunEthereum.com",
     testimonial:
-      "Awesome work getting through the speed run!! Let me know how I can help along the way. Keep building and keep learning",
+      "Awesome work getting through the speed run!! Let me know how I can help along the way. Keep building and keep learning!",
   },
 ];

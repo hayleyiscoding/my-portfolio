@@ -1,6 +1,5 @@
 import React from "react";
 import { secondarySkillsData } from "../constants";
-import { RiCheckboxBlankFill } from "react-icons/ri";
 import {
   SiSass,
   SiSolidity,
@@ -36,11 +35,6 @@ const Exploring = () => {
             const Icon = icons[i];
             return (
               <div className="w-[60%] text-center md:my-3 md:p-5">
-                {/* <img
-              className="h-10 w-auto mx-auto opacity-70 object-contain"
-              src="https://cdn.rareblocks.xyz/collection/bakerstreet/images/logo-cloud/2/logo-liva.png"
-              alt=""
-            /> */}
                 <div className="flex justify-around items-center p-5 rotate-12 custom-neumorphic-tech">
                   <div className="text-custom-red mr-4 md:mr-0">
                     <Icon size={20} />
@@ -49,17 +43,6 @@ const Exploring = () => {
                     {item.name}
                   </p>
                 </div>
-                {/* <div className="bg-custom-red h-0.5 flex rotate-12">
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                  <RiCheckboxBlankFill
-                    style={{ color: "white", marginLeft: "auto" }}
-                    size={3}
-                  />
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                </div> */}
               </div>
             );
           })}
@@ -79,7 +62,6 @@ const Exploring = () => {
                 These are additional skills that I have explored and possess an
                 introductory level of knowledge in.
               </p>
-
               <div className="mt-8"></div>
             </div>
           </div>
@@ -88,11 +70,6 @@ const Exploring = () => {
             const Icon = icons[i];
             return (
               <div className="w-[60%] text-center my-3 p-5">
-                {/* <img
-              className="h-10 w-auto mx-auto opacity-70 object-contain"
-              src="https://cdn.rareblocks.xyz/collection/bakerstreet/images/logo-cloud/2/logo-liva.png"
-              alt=""
-            /> */}
                 <div className="flex justify-around items-center p-5 rotate-12 custom-neumorphic-tech">
                   <div className="text-custom-red mr-4 md:mr-0">
                     <Icon size={20} />
@@ -101,29 +78,9 @@ const Exploring = () => {
                     {item.name}
                   </p>
                 </div>
-                {/* <div className="bg-custom-red h-0.5 flex rotate-12">
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                  <RiCheckboxBlankFill
-                    style={{ color: "white", marginLeft: "auto" }}
-                    size={3}
-                  />
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                  <RiCheckboxBlankFill style={{ color: "white" }} size={5} />
-                </div> */}
               </div>
             );
           })}
-
-          {/* <div className="hidden lg:block">
-            <img
-              className="h-10 w-auto mx-auto opacity-70 object-contain"
-              src="https://cdn.rareblocks.xyz/collection/bakerstreet/images/logo-cloud/2/logo-utosia.png"
-              alt=""
-            />
-            <p className="text-white">SASS</p>
-          </div> */}
         </div>
       </div>
     </section>

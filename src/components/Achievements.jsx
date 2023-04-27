@@ -9,7 +9,7 @@ const Achievements = () => {
     >
       <div className=" container px-8 mx-auto sm:px-6 lg:px-8">
         <div className="text-center pt-0">
-          <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
+          <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
             <span className="relative inline-block">
               <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
               <span className="relative font-semibold">Achievements</span>
@@ -19,16 +19,16 @@ const Achievements = () => {
         </div>
         <div className="grid items-center grid-cols-1 lg:grid-cols-1 gap-y-12 lg:gap-x-20 xl:gap-x-40">
           <div className="flow-root mt-12 xl:mt-20">
-            <ul className="-my-8 divide-y divide-gray-200 xl:-my-10 flex flex-col items-start max-w-2xl mx-auto">
+            <ul className="-my-8 divide-y divide-white xl:-my-10 flex flex-col items-start max-w-2xl mx-auto">
               {moreAboutMeData.map((fact) => (
                 <li
                   key={fact.id}
                   className="flex flex-col py-8 xl:py-10 sm:flex-row sm:items-start w-full"
                 >
-                  <span className="text-3xl font-normal text-gray-300 text-opacity-40">
-                    {`0${fact.id}`}.
+                  <span className="text-5xl font-normal text-gray-300 text-opacity-40">
+                    {fact.id === 10 ? `${fact.id}` : `0${fact.id}`}.
                   </span>
-                  <p className="mt-6 text-md font-normal text-white sm:mt-0 sm:ml-9">
+                  <p className="mt-6 text-md font-normal text-white sm:mt-0 sm:ml-9 text-opacity-90">
                     {fact.title}:&nbsp;
                     <br />
                     <br />

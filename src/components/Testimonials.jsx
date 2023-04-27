@@ -18,7 +18,7 @@ SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const Testimonials = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto py-24">
       <div className="text-center pt-0 mb-20">
         <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
           <span className="relative inline-block">
@@ -48,22 +48,22 @@ const Testimonials = () => {
       >
         {testimonialData.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className=" h-full rounded-xl text-center">
+            <div className="h-full rounded-xl text-center">
               <img
-                className="w-[20%] mx-auto mt-10"
-                src="https://landingfoliocom.imgix.net/store/collection/dusk/images/testimonial/6/avatar-female.png"
+                className="w-[20%] mx-auto mt-10 grayscale contrast-200 rounded-[50%]"
+                src={slide.avatar}
                 alt=""
               />
               <blockquote className="mt-3 sm:mt-8 px-10">
-                <p className="text-sm font-light text-white">
+                <p className="text-sm font-light text-white text-opacity-70">
                   {slide.testimonial}
                 </p>
               </blockquote>
-              <p className="mt-6 text-xl font-semibold text-gray-200 sm:mt-10">
+              <p className="mt-6 text-md font-semibold text-gray-200 sm:mt-10">
                 {slide.name}
               </p>
               <p className="mt-1 text-sm font-light text-gray-400">
-                {`${slide.company}`}
+                {slide.company}
               </p>
             </div>
           </SwiperSlide>

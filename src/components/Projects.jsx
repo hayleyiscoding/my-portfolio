@@ -6,7 +6,7 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="container px-6 mx-auto py-24">
         <section className="text-white text-opacity-70 text-center">
-          <h2 className="text-5xl md:text-5xl font-extralight text-white md:mt-3 text-center mb-8">
+          <h2 className="text-4xl md:text-5xl font-extralight text-white md:mt-3 text-center mb-8">
             <span className="relative inline-block">
               <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
               <span className="relative font-semibold">Projects</span>

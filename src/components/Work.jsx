@@ -8,7 +8,7 @@ const Work = () => {
       className="container experience lg:flex justify-around align-center mx-auto py-24 px-8"
     >
       <div className="text-center pt-0">
-        <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8">
+        <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
           <span className="relative inline-block">
             <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
             <span className="relative font-semibold">Work</span>

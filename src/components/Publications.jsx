@@ -64,13 +64,9 @@ const Publications = () => {
     <section id="publications" className="bg-custom-black">
       <div className="container mx-auto sm:px-6 lg:px-16 px-8 md:py-24">
         <div className="text-left mb-24">
-          <h2 className="mt-4 text-5xl font-extralight text-white md:mt-8 mb-12">
+          <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8 mb-12">
             <span className="relative inline-block">
               <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
-              {/* Hidden on Mobile */}
-              <span className="relative font-semibold hidden md:visible">
-                Publications
-              </span>
               <span className="relative font-semibold">Publications</span>
             </span>
             <br className="block sm:hidden" />

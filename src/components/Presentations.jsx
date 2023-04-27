@@ -11,7 +11,7 @@ const Presentations = () => {
       <div className=" container py-24 px-4 mx-auto sm:px-6 lg:px-8">
         <div className="max-w-md mx-auto text-center">
           <div className="text-center pt-0">
-            <h2 className="mt-36 text-5xl font-extralight text-white md:mt-8">
+            <h2 className="mt-36 text-4xl md:text-5xl font-extralight text-white md:mt-8">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
                 <span className="relative font-semibold custom-font-ysabeau">
