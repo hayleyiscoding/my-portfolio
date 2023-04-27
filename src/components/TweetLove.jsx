@@ -57,7 +57,7 @@ const TweetLove = () => {
                 style={{
                   width: "100%",
                   display: "block",
-                  borderRadius: "15%",
+                  borderRadius: "5%",
                 }}
                 className="grayscale contrast-200 hover:grayscale-0 md:rounded-md hover:border-t-8 md:border-t-8 border-t-white hover:border-t-custom-red px-9 md:px-0"
               />

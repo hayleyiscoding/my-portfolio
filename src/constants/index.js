@@ -496,11 +496,11 @@ export const moreAboutMeData = [
   },
 ];
 
-export const testimonials = [
+export const testimonialData = [
   {
     id: 1,
     name: "Sally",
-    job: "Founder and Head Coach",
+    job: "Founder",
     company: "Bubble Blowers Swim School",
     testimonial:
       "Hayley did an amazing job with our website! She really captured the essence of what Bubble Blowers is all about. My students were so impressed with it and I was able to increase my student numbers dramatically after the website launch.",
@@ -508,7 +508,7 @@ export const testimonials = [
   {
     id: 2,
     name: "Matheus Pagani",
-    job: "Founder and CEO",
+    job: "CEO",
     company: "BFT Solutions",
     testimonial:
       "Congratulations, Hayley! You and your team did great in the Bootcamp! Your final project is amazing! Pure 🔥🔥🔥",
@@ -516,6 +516,14 @@ export const testimonials = [
   {
     id: 3,
     name: "Austin Griffith",
+    job: "Builder",
+    company: "SpeedRunEthereum.com",
+    testimonial:
+      "Awesome work getting through the speed run!! Let me know how I can help along the way. Keep building and keep learning",
+  },
+  {
+    id: 4,
+    name: "Alexh",
     job: "Builder",
     company: "SpeedRunEthereum.com",
     testimonial:
