@@ -55,7 +55,7 @@ const Testimonials = () => {
                 alt=""
               />
               <blockquote className="mt-3 sm:mt-8 px-10">
-                <p className="text-sm font-light text-white text-opacity-70">
+                <p className="text-sm font-light text-white text-opacity-70 px-6">
                   {slide.testimonial}
                 </p>
               </blockquote>

@@ -49,7 +49,7 @@ const TweetLove = () => {
       </div>
       <div className="rounded-md">
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-          <Masonry columnsCount={4} gutter="1.25rem">
+          <Masonry columnsCount={4} gutter="1.5rem">
             {tweetImages.map((image, i) => (
               <img
                 key={i}
@@ -59,7 +59,7 @@ const TweetLove = () => {
                   display: "block",
                   borderRadius: "12%",
                 }}
-                className="grayscale contrast-200 hover:grayscale-0 md:rounded-md hover:border-t-4 md:border-t-4 border-t-white hover:border-t-custom-red px-9 md:px-0"
+                className="grayscale w-full contrast-200 hover:grayscale-0 md:rounded-md hover:border-t-4 md:border-t-4 border-t-white hover:border-t-custom-red px-9 md:px-0"
               />
             ))}
           </Masonry>
