@@ -29,8 +29,59 @@ const Greeting = (props) => {
               />
             </h2>
             {showText ? (
-              <div>
-                <h4 className="md:visible text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
+              <div className="text-md font-extralight text-opacity-70">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString("I'm excited that you're here! ")
+                      .callFunction(() => {
+                        setShowText(true);
+                      })
+                      .start();
+                  }}
+                  options={{ delay: 20 }}
+                />
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .pauseFor(2000)
+                      .typeString(
+                        "Move your mouse around the screen to see how happy I am about that..."
+                      )
+                      .callFunction(() => {
+                        setShowText(true);
+                      })
+                      .start();
+                  }}
+                  options={{ delay: 20 }}
+                />
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .pauseFor(10000)
+                      .typeString(
+                        "It means a lot to me that you're taking the time to view my portfolio. Thank you 🙏! I hope you'll love it!"
+                      )
+                      .callFunction(() => {
+                        setShowText(true);
+                      })
+                      .start();
+                  }}
+                  options={{ delay: 20 }}
+                />
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .pauseFor(13000)
+                      .typeString("Let's get started...")
+                      .callFunction(() => {
+                        setShowText(true);
+                      })
+                      .start();
+                  }}
+                  options={{ delay: 20 }}
+                />
+                {/* <h4 className="md:visible text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
                   I'm excited that you're here! I hope you are having a great
                   day.
                   <br />
@@ -41,9 +92,9 @@ const Greeting = (props) => {
                   am about that!
                   <br /> <br />
                   And then, let's get started...
-                </h4>
+                </h4> */}
                 {/* Mobile */}
-                <h4 className="visible lg:hidden text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
+                {/* <h4 className="visible lg:hidden text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
                   I'm excited that you're here! I hope you are having a great
                   day.
                   <br />
@@ -53,12 +104,12 @@ const Greeting = (props) => {
                   Tap your finger around the screen to see how happy I am about
                   that! <br /> <br />
                   And then, let's get started...
-                </h4>
+                </h4> */}
 
                 <button
                   type="submit"
                   onClick={navigateToHome}
-                  className="red-btn cursor-pointer absolute inline-flex items-center justify-center px-10 py-3 mt-8 font-light leading-5 text-white transition-all duration-200 bg-custom-red border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white text-md"
+                  className="red-btn text-sm cursor-pointer absolute inline-flex items-center justify-center px-10 py-3 mt-8 font-light leading-5 text-white transition-all duration-200 bg-custom-red border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white text-md"
                 >
                   View portfolio
                   <svg
