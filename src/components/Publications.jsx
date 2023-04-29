@@ -7,6 +7,8 @@ import warriorBadgeHashnode from "../assets/publications/warrior-hashnode-badge.
 import featuredBadgeHashnode from "../assets/publications/featured-hashnode-badge.png";
 import "animate.css";
 import { format } from "date-fns";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const endpoint = "https://api.hashnode.com/";
 
@@ -100,11 +102,12 @@ const Publications = () => {
               </div>
             ))}
           </div>
-          <div className="bg-[#C0c0c0] rotate-6 md:w-[40%] w-[60%] md:flex justify-center align-center rounded-xl ml-10 md:ml-20 mt-24 md:-mt-10 ">
-            <img
+          <div className="bg-[#C0c0c0] rotate-3 md:w-[40%] w-[60%] md:flex justify-center align-center rounded-xl ml-10 md:ml-20 mt-24 md:-mt-10 ">
+            <LazyLoadImage
               src={testimonial6}
+              effect="blur"
               alt="Twitter post announcing article being featured on Hashnode"
-              className="w-full origin-bottom rotate-12 md:ml-15 grayscale rounded-xl "
+              className="text-white w-full origin-bottom rotate-12 md:ml-15 grayscale rounded-xl "
             />
           </div>
         </div>
@@ -118,25 +121,28 @@ const Publications = () => {
         <div className="md:flex justify-around align-center gap-5 w-full md:max-w-7xl my-12 mt-20 mx-auto pt-20">
           {" "}
           <div id="target-element" className="md:-mt-0">
-            <img
+            <LazyLoadImage
               src={talkBadgeHashnode}
+              effect="blur"
               alt="Talk of the Town HashNode Badge"
-              className="w-full object-cover grayscale rounded-xl contrast-200 md:custom-card-tilt custom-neumorphic-table p-5"
+              className="text-white w-full object-cover grayscale rounded-xl contrast-200 md:custom-card-tilt custom-neumorphic-table p-5"
             />
           </div>
           <div className="mt-5 md:mt-20 rotate-img md:ml-3 md:mr-4 ">
-            <img
+            <LazyLoadImage
               src={warriorBadgeHashnode}
+              effect="blur"
               alt="Word Warrior HashNode Badge"
-              className="w-full object-cover grayscale contrast-200 rounded-xl p-5 custom-neumorphic-table"
+              className="text-white w-full object-cover grayscale contrast-200 rounded-xl p-5 custom-neumorphic-table"
             />
           </div>
           <div className="mt-5 md:mt-0 ">
             {" "}
-            <img
+            <LazyLoadImage
               src={featuredBadgeHashnode}
+              effect="blur"
               alt="Featured on HashNode Badge"
-              className="w-full object-cover grayscale contrast-200 rounded-xl md:custom-card-tilt2 custom-neumorphic-table p-5"
+              className="text-white w-full object-cover grayscale contrast-200 rounded-xl md:custom-card-tilt2 custom-neumorphic-table p-5"
             />
           </div>
         </div>

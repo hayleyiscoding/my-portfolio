@@ -68,9 +68,11 @@ const Footer = () => {
           </ul>
 
           <p className="mt-6 font-sans text-sm font-normal text-center text-opacity-50 sm:mt-0 sm:text-left sm:order-1 text-white">
-            <span className="text-white tracking-widest ">
-              Made with ❤️ by @hayleyiscoding ©2023
+            <span className="text-white tracking-wider ">
+              Designed and developed with ❤️ by Hayley
             </span>{" "}
+            <br />
+            hayleyiscoding (@) gmail.com | ©2023
           </p>
         </div>
       </div>

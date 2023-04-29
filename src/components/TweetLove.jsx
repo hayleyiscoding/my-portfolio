@@ -54,12 +54,13 @@ const TweetLove = () => {
               <img
                 key={i}
                 src={image}
+                alt="Tweet with testimonial"
                 style={{
                   width: "100%",
                   display: "block",
                   borderRadius: "12%",
                 }}
-                className="grayscale w-full contrast-200 hover:grayscale-0 md:rounded-md hover:border-t-4 md:border-t-4 border-t-white hover:border-t-custom-red px-9 md:px-0"
+                className="text-white grayscale w-full contrast-200 hover:grayscale-0 md:rounded-md hover:border-t-4 md:border-t-4 border-t-white hover:border-t-custom-red px-9 md:px-0"
               />
             ))}
           </Masonry>

@@ -32,7 +32,8 @@ const Projects = () => {
                 <div className="relative overflow-hidden bg-no-repeat bg-cover md:custom-zoom">
                   <img
                     src={project.image}
-                    className="w-full rounded-t-lg grayscale contrast-200"
+                    alt={project.title}
+                    className="text-white w-full rounded-t-lg grayscale contrast-200"
                   />
                   <a href="#!">
                     <div

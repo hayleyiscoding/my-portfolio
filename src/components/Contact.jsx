@@ -38,7 +38,7 @@ const Contact = () => {
     <section id="contact" className="py-10 bg-custom-black sm:py-16 lg:py-24">
       <div className=" container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="text-center pt-0 mb-20">
+          <div className="text-center pt-0 md:mb-20">
             <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
@@ -48,40 +48,6 @@ const Contact = () => {
             </h2>
           </div>
         </div>
-
-        {/* <div className="max-w-3xl mx-auto mt-12 sm:mt-16">
-          <div className="grid grid-cols-1 gap-6 px-8 text-center md:px-0 md:grid-cols-2">
-            <div className="overflow-hidden bg-custom-black rounded-xl border-1 border-white">
-              <div className="p-6 custom-neumorphic-tech">
-                <div className="flex-shrink-0 w-10 h-10 mx-auto text-gray-400  pb-16">
-                  <AiOutlineMail size={35} />
-                </div>
-                <p
-                  href="https://twitter.com/hayleyiscoding"
-                  target="_blank"
-                  className="text-md font-normal text-white"
-                >
-                  hayleyiscoding (at) gmail.com
-                </p>
-              </div>
-            </div>
-
-            <div className="overflow-hidden bg-custom-black rounded-xl custom-neumorphic-tech">
-              <div className="p-6">
-                <div className="flex-shrink-0 w-10 h-24 mx-auto text-gray-400 pb-16">
-                  {" "}
-                  <AiOutlineTwitter size={35} />
-                </div>
-                <a
-                  href="https://twitter.com/hayleyiscoding"
-                  target="_blank"
-                  className="mt-6 text-md font-normal text-white"
-                >
-                  twitter.com/hayleyiscoding
-                </a>
-              </div>
-            </div>
-          </div> */}
 
         <div className="mx-auto overflow-hidden bg-custom-black rounded-xl max-w-3xl">
           <div className="px-6">
@@ -174,7 +140,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
 
       {/* Notification */}
       {hasEmailSent ? (
