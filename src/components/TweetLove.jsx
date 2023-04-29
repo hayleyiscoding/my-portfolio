@@ -1,5 +1,7 @@
 import React from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import testimonial1 from "../assets/testimonials/testimonial-1.jpg";
 import testimonial2 from "../assets/testimonials/testimonial-2.jpg";
@@ -51,10 +53,11 @@ const TweetLove = () => {
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry columnsCount={4} gutter="1.5rem">
             {tweetImages.map((image, i) => (
-              <img
+              <LazyLoadImage
                 key={i}
                 src={image}
                 alt="Tweet with testimonial"
+                effect="blur"
                 style={{
                   width: "100%",
                   display: "block",

@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { AiOutlineTwitter, AiOutlineMail } from "react-icons/ai";
 
 const serviceId = import.meta.env.VITE_SERVICE_ID || "default_value";
 const templateId = import.meta.env.VITE_TEMPLATE_ID || "default_value";

@@ -1,11 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-// import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import "swiper/components/pagination/pagination.min.css";
-// import "swiper/components/navigation/navigation.min.css";
 
 import SwiperCore, {
   EffectCoverflow,

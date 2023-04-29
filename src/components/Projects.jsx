@@ -1,5 +1,7 @@
 import React from "react";
 import { projects } from "../constants";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Projects = () => {
   return (
@@ -30,9 +32,10 @@ const Projects = () => {
                 data-mdb-ripple-color="light"
               >
                 <div className="relative overflow-hidden bg-no-repeat bg-cover md:custom-zoom">
-                  <img
+                  <LazyLoadImage
                     src={project.image}
                     alt={project.title}
+                    effect="blur"
                     className="text-white w-full rounded-t-lg grayscale contrast-200"
                   />
                   <a href="#!">

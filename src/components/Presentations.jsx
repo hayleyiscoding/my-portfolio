@@ -1,6 +1,8 @@
 import React from "react";
 import solidityPresentation from "../assets/projects/solidity-presentation.png";
 import womenWeb3Presentation from "../assets/projects/women-web3-presentation.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Presentations = () => {
   return (
@@ -34,9 +36,10 @@ const Presentations = () => {
               href="https://www.youtube.com/watch?v=gWzAzkQoy-o&t=2939s"
               target="_blank"
             >
-              <img
-                className="w-full max-w-md mx-auto cursor-pointer"
+              <LazyLoadImage
+                className="text-white w-full max-w-md mx-auto cursor-pointer"
                 src={solidityPresentation}
+                effect="blur"
                 alt="Presentation that I did for the Encode Club Solidity Bootcamp"
               />
             </a>
@@ -46,8 +49,8 @@ const Presentations = () => {
               href="https://www.youtube.com/watch?v=_mut70FCiv4"
               target="_blank"
             >
-              <img
-                className="w-full max-w-md mx-auto cursor-pointer"
+              <LazyLoadImage
+                className="text-white w-full max-w-md mx-auto cursor-pointer"
                 src={womenWeb3Presentation}
                 alt="Prsentation that I did for the Women Build Web3 Accelerator Program"
               />

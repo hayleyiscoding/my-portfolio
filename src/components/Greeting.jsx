@@ -30,7 +30,7 @@ const Greeting = (props) => {
             </h2>
             {showText ? (
               <div>
-                <h4 className="text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
+                <h4 className="md:visible text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
                   I'm excited that you're here! I hope you are having a great
                   day.
                   <br />
@@ -43,7 +43,7 @@ const Greeting = (props) => {
                   And then, let's get started...
                 </h4>
                 {/* Mobile */}
-                <h4 className="lg:hidden text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
+                <h4 className="visible lg:hidden text-xs font-extralight text-white sm:text-sm xl:text-lg mb-8 max-w-xl">
                   I'm excited that you're here! I hope you are having a great
                   day.
                   <br />
