@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="container mx-auto pt-2 bg-custom-black md:pt-2 sm:pt-16 2xl:pt-4 p-5 animate__animated animate__zoomIn"
+      className="container mx-auto pt-2 bg-custom-black md:pt-2 sm:pt-16 2xl:pt-4 p-5"
     >
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="grid items-center grid-cols-1 md:grid-cols-2 place-items-center md:h-screen">
