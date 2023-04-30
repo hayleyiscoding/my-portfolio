@@ -105,8 +105,9 @@ const Intro = () => {
             {finalName && (
               <Fireworks
                 options={{
-                  acceleration: 1.0,
-                  opacity: 0.5,
+                  acceleration: 1,
+
+                  opacity: 0.2,
                   lineWidth: {
                     explosion: {
                       min: 0,

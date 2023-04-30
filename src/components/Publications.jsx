@@ -64,7 +64,7 @@ const Publications = () => {
 
   return (
     <section id="publications" className="bg-custom-black">
-      <div className="container mx-auto sm:px-6 lg:px-16 px-8 md:py-24">
+      <div className="container mx-auto sm:px-6 lg:px-16 px-8 md:pt-24 lg:py-24">
         <div className="text-left mb-24">
           <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8 mb-12">
             <span className="relative inline-block">
@@ -75,7 +75,7 @@ const Publications = () => {
           </h2>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-1 sm:mt-5 lg:mt-24 pb-5 lg:flex justify-around">
+        <div className="max-w-5xl mx-auto mt-1 sm:mt-5 lg:mt-24 pb-5 lg:flex justify-between ">
           <div className="-my-8 divide-y divide-gray-900">
             {data.user.publication.posts?.map((post, i) => (
               <div key={post[i]} className="py-6 group">
@@ -102,7 +102,7 @@ const Publications = () => {
               </div>
             ))}
           </div>
-          <div className="bg-[#C0c0c0] rotate-3 md:w-[40%] w-[60%] md:flex justify-center align-center rounded-xl ml-10 md:ml-20 mt-24 md:-mt-10 ">
+          <div className="bg-[#C0c0c0] rotate-3 md:w-[35%] w-[60%] md:flex justify-center align-center rounded-xl ml-10 md:mx-auto mt-24 md:mt-[6rem] lg:-mt-10 ">
             <LazyLoadImage
               src={testimonial6}
               effect="blur"
@@ -112,13 +112,14 @@ const Publications = () => {
           </div>
         </div>
       </div>
-      <div
-        id="animate-element"
-        className={`bg-custom-red h-0.5 my-8 mx-auto w-[80%] md:animate__animated ${
-          animate ? "animate__flip" : ""
-        }`}
-      >
-        <div className="md:flex justify-around align-center gap-5 w-full md:max-w-7xl my-12 mt-20 mx-auto pt-20">
+
+      <div className="bg-custom-red h-0.5 my-8 mx-auto w-[80%]">
+        <div
+          id="animate-element"
+          className={`md:flex justify-around align-center gap-5 w-full md:max-w-7xl my-12 mt-20 mx-auto pt-20 ${
+            animate ? "animate__animated animate__flip" : ""
+          }`}
+        >
           {" "}
           <div id="target-element" className="md:-mt-0">
             <LazyLoadImage

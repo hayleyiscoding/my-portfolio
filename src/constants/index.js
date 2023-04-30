@@ -514,7 +514,7 @@ export const testimonialData = [
     name: "Sally",
     company: "Bubble Blowers Swim School",
     testimonial:
-      "Hayley did an amazing job with our website! She really captured the essence of what Bubble Blowers is all about. My students were so impressed with it and I was able to increase my student numbers dramatically after the website launch.",
+      "Hayley did an amazing job with our website! She really captured the essence of what Bubble Blowers is all about. I was able to increase my student numbers dramatically after the website launch.",
   },
   {
     id: 3,

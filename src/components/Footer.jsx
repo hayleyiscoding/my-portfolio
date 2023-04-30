@@ -68,7 +68,7 @@ const Footer = () => {
           </ul>
 
           <p className="mt-6 font-sans text-sm font-normal text-center text-opacity-50 sm:mt-0 sm:text-left sm:order-1 text-white">
-            <span className="text-white tracking-wider ">
+            <span className="text-white tracking-wider leading-10 ">
               Designed and developed with ❤️ by Hayley
             </span>{" "}
             <br />

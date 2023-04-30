@@ -13,10 +13,10 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       (result) => {
-        setIsLoading(true);
         setHasEmailSent(true);
         setIsLoading(false);
         setTimeout(() => setHasEmailSent(false), 3000);
@@ -34,7 +34,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-10 bg-custom-black sm:py-16 lg:py-24">
+    <section
+      id="contact"
+      className="py-10 bg-custom-black sm:py-16 lg:py-24 relative"
+    >
       <div className=" container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
           <div className="text-center pt-0 md:mb-20">
@@ -115,11 +118,15 @@ const Contact = () => {
                   <button
                     type="submit"
                     value="Send"
-                    className=" cursor-pointer absolute inline-flex items-center justify-center px-10 py-3 mt-8 font-light leading-5 text-white transition-all duration-200 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:text-white  hover:opacity-70 text-md"
+                    className="cursor-pointer absolute inline-flex items-center justify-center px-10 py-3 mt-8 font-light leading-5 text-white transition-all duration-200 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:text-white  hover:opacity-70 text-md"
                   >
                     Send
                     <svg
-                      className="w-6 h-6 ml-2"
+                      className={`${
+                        isLoading
+                          ? "w-6 h-6 ml-2 inline-block animate-spin motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                          : "w-6 h-6 ml-2"
+                      }`}
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -136,61 +143,42 @@ const Contact = () => {
                 </div>
               </div>
             </form>
-          </div>
-        </div>
-      </div>
 
-      {/* Notification */}
-      {hasEmailSent ? (
-        <div className="h-24 bg-custom-black">
-          <div className="flex items-end justify-end w-full h-full px-4 py-5 sm:p-6">
-            <div className="bg-black w-full max-w-sm overflow-hidden border border-white rounded-lg shadow-lg">
-              <div className="p-3">
-                <div className="flex items-center justify-between">
-                  <svg
-                    className="flex-shrink-0 w-6 h-6 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <p className="ml-3 text-sm font-medium text-white">
-                    Email sent successfully!
-                  </p>
-
-                  <div className="flex pl-8 ml-auto">
-                    <button className="inline-flex text-white transition-all bg-black rounded-md hover:text-indigo-600 focus:outline-none focus:ring-2 durarion-200 focus:text-indigo-600 focus:ring-offset-2 focus:ring-indigo-600 focus:ring-offset-indigo-100">
-                      <svg
-                        className="w-5 h-5"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M6 18L18 6M6 6l12 12"
-                        ></path>
-                      </svg>
-                    </button>
+            {/* Notification */}
+            {hasEmailSent ? (
+              <div className="h-24 bg-custom-black absolute z-5 -ml-3 md:-ml-6">
+                <div className="w-full h-full py-5 sm:p-6">
+                  <div className="bg-green-500 w-full max-w-sm overflow-hidden border border-white rounded-lg shadow-lg">
+                    <div className="p-3">
+                      <div className="flex items-center justify-between">
+                        <svg
+                          className="flex-shrink-0 w-6 h-6 text-white bg-green-500"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <p className="ml-3 text-sm font-medium text-white">
+                          Email sent successfully!
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
-      ) : (
-        ""
-      )}
+      </div>
 
       {isError ? (
         <div className="h-24 bg-custom-black">
@@ -215,25 +203,6 @@ const Contact = () => {
                   <p className="ml-3 text-sm font-medium text-white">
                     Error! Please try again.
                   </p>
-
-                  <div className="flex pl-8 ml-auto">
-                    <button className="inline-flex text-white transition-all bg-black rounded-md hover:text-indigo-600 focus:outline-none focus:ring-2 durarion-200 focus:text-indigo-600 focus:ring-offset-2 focus:ring-indigo-600 focus:ring-offset-indigo-100">
-                      <svg
-                        className="w-5 h-5"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M6 18L18 6M6 6l12 12"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

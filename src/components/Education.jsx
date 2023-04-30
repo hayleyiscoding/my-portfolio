@@ -16,7 +16,7 @@ const Education = () => {
           <br className="block sm:hidden" />
         </h2>
       </div>
-      <div className="col-1 w-full md:w-[70%] p-5 mt-10">
+      <div className="col-1 w-full lg:w-[70%] p-5 mt-10">
         <ol class="container relative border-l border-custom-red dark:border-gray-700 mx-auto max-w-7xl">
           {educationData.map((item) => (
             <li key={item.id} className="mb-10 ml-4">

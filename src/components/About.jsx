@@ -15,7 +15,7 @@ const About = () => {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="grid items-center grid-cols-1 md:grid-cols-2 place-items-center md:h-screen">
           <div className="order-2 lg:order-1 p-5 md:ml-0 lg:ml-24 pt-10 ">
-            <h2 className="text-4xl md:text-5xl font-extralight text-white md:mt-3 mb-5">
+            <h2 className="text-4xl lg:text-5xl font-extralight text-white md:mt-3 mb-5">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
                 <span className="relative font-semibold"> Hi! I'm Hayley.</span>
@@ -33,9 +33,9 @@ const About = () => {
               web3 applications built with blockchain technologies.
               <br />
               <br />
-              I work well in a team and I'm an experienced remote worker. I have
-              lived on 6 continents so I am well-adapted to communicating with
-              people from different cultures.
+              I work well in a remote team and I'm an experienced remote worker.
+              I have lived on 6 continents so I am well-adapted to communicating
+              with people from different cultures.
               <br />
               <br />I am open to working asynchronously in various time zones
               and can adapt to your time zone needs. I'm excited to contribute
