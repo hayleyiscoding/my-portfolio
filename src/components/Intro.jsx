@@ -40,7 +40,7 @@ const Intro = () => {
 
       <div className="bg-custom-black p-6 md:p-40 pb-[5rem] pt-20 md:pb-0">
         {!finalName ? (
-          <div className="bg-custom-black text-white text-center pt-20 ">
+          <div className="bg-custom-black text-white text-center">
             <h1 className="text-4xl font-extralight text-white sm:text-6xl xl:text-8xl pb-2 w-full max-w-7xl">
               <Typewriter
                 onInit={(typewriter) => {

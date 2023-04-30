@@ -33,7 +33,7 @@ const Greeting = (props) => {
               <div id="container">
                 <div
                   id="typewriter"
-                  className="text-sm md:text-md font-extralight text-opacity-90 leading-5 md:leading-8 overflow-y-scroll h-auto"
+                  className="text-sm md:text-lg font-extralight text-opacity-90 leading-5 md:leading-8 overflow-y-scroll h-auto"
                 >
                   <Typewriter
                     onInit={(typewriter) => {
