@@ -38,9 +38,9 @@ const Intro = () => {
         </Link>
       )}
 
-      <div className="bg-custom-black p-6 pt-20 md:p-40">
+      <div className="bg-custom-black p-6 md:p-40 pb-[5rem] md:pb-0">
         {!finalName ? (
-          <div className="bg-custom-black text-white text-center ">
+          <div className="bg-custom-black text-white text-center pt-20 ">
             <h1 className="text-4xl font-extralight text-white sm:text-6xl xl:text-8xl pb-2 w-full max-w-7xl">
               <Typewriter
                 onInit={(typewriter) => {
