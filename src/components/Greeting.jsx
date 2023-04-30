@@ -30,34 +30,36 @@ const Greeting = (props) => {
               />
             </h2>
             {showText ? (
-              <div className="text-md font-extralight text-opacity-70 leading-8">
+              <div className="text-md font-extralight text-opacity-90 leading-8">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        "My name is Hayley (known online as @hayleyiscoding)."
+                        "How are you? My name is Hayley (known online as @hayleyiscoding)."
                       )
+                      .pauseFor(1500)
+                      .typeString(" But wait, just a second... ")
+                      .pauseFor(1500)
+                      .typeString(" aren't these fireworks annoying?!")
                       .pauseFor(1500)
                       .typeString(
-                        " I hope you are well and that you're not having a 'bad day at the office' today!"
+                        " Move your mouse to the bottom of the screen (or tap on mobile) to move them out the way!"
                       )
+                      .pauseFor(7000)
+                      .typeString(" Great! Now that that's done...")
                       .pauseFor(1500)
-                      .typeString("I just wanted to say welcome and...")
+                      .typeString(" I just wanted to say welcome and...")
                       .pauseFor(1000)
                       .typeString(
                         " maybe you can tell that I'm excited that you're here!"
                       )
                       .pauseFor(2000)
                       .typeString(
-                        " Move your mouse around the screen slowly (or tap on mobile!) to personalise your fireworks show..."
-                      )
-                      .pauseFor(7000)
-                      .typeString(
-                        " I know you're really busy but It means a lot to me that you're taking the time to view my portfolio. Thank you!"
+                        " I know you're probably busy but it means a lot to me that you're taking the time to view my portfolio. Thank you!"
                       )
                       .pauseFor(1500)
                       .typeString(
-                        " I used many things to make this portfolio a reality - Javascript array and string methods, React hooks such as useEffect, useRef and useNavigate, CSS grid and positioning methods using Tailwind CSS, data fetching using axios and GraphQL, error handling, libraries such as email.js, animate.css and CSV download, neumorphic design concepts and more..."
+                        " I used a bunch of tech to make this portfolio a reality - Javascript array and string methods, React hooks such as useEffect, useRef and useNavigate, CSS grid and positioning methods using Tailwind CSS, data fetching using axios and GraphQL, error handling, libraries such as email.js, animate.css and CSV download, neumorphic design concepts and more..."
                       )
                       .pauseFor(2000)
                       .typeString(
