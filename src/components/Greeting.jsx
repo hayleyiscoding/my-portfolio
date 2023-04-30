@@ -63,7 +63,7 @@ const Greeting = (props) => {
                         )
                         .pauseFor(1500)
                         .typeString(
-                          " I used a bunch of tech to make it a reality - Javascript array and string methods, React hooks such as useEffect, useRef and useNavigate, CSS grid and positioning methods using Tailwind CSS, data fetching using axios and GraphQL, libraries such as email.js and animate.css, neumorphic design concepts and more..."
+                          " I used a bunch of tech to make it a reality - Javascript array methods, React hooks such as useEffect and useRef, CSS grid and positioning methods using Tailwind CSS, data fetching using GraphQL, libraries such as email.js, neumorphic design concepts and more..."
                         )
                         .pauseFor(2000)
                         .typeString(
