@@ -11,6 +11,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@fireworks-js/react": "^2.10.2",
+    "@rainbow-me/rainbowkit": "^0.12.12",
     "animate.css": "^4.1.1",
     "axios": "^1.3.6",
     "date-fns": "^2.29.3",
@@ -27,15 +28,23 @@
     "react-swiper": "^0.1.5",
     "swiper": "^9.2.4",
     "three": "^0.151.3",
-    "typewriter-effect": "^2.19.0"
+    "typewriter-effect": "^2.19.0",
+    "wagmi": "^0.12.12"
   },
   "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-lazy-load-image-component": "^1.5.3",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
+    "chai": "^4.3.7",
     "dotenv": "^16.0.3",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.14.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.1",
     "vite": "^4.2.0"

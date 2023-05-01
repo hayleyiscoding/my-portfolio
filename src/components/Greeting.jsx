@@ -38,11 +38,9 @@ const Greeting = (props) => {
                   <Typewriter
                     onInit={(typewriter) => {
                       typewriter
-                        .typeString(
-                          "How are you? My name is Hayley (known online as @hayleyiscoding)."
-                        )
+                        .typeString("How are you?")
                         .pauseFor(1500)
-                        .typeString(" But wait, just a second... ")
+                        .typeString(" Oh wait, just a second... ")
                         .pauseFor(1500)
                         .typeString(" aren't these fireworks annoying?!")
                         .pauseFor(1500)
@@ -52,27 +50,21 @@ const Greeting = (props) => {
                         .pauseFor(7000)
                         .typeString(" Great! Now that that's done...")
                         .pauseFor(1500)
+                        .typeString(
+                          " My name is Hayley (known online as @hayleyiscoding)."
+                        )
+                        .pauseFor(1500)
                         .typeString(" I just wanted to say welcome and...")
                         .pauseFor(1000)
                         .typeString(
                           " maybe you can tell that I'm excited that you're here!"
                         )
-                        .pauseFor(2000)
-                        .typeString(
-                          " Thank you for taking a moment to view my portfolio!"
-                        )
                         .pauseFor(1500)
                         .typeString(
-                          " I used a bunch of tech to make it a reality - Javascript array methods, React hooks such as useEffect and useRef, CSS grid and positioning methods using Tailwind CSS, data fetching using GraphQL, libraries such as email.js, neumorphic design concepts and more..."
+                          " Thank you for taking a moment to view my portfolio..."
                         )
-                        .pauseFor(2000)
-                        .typeString(
-                          " I hope you'll love it as I really enjoyed making it!"
-                        )
-                        .pauseFor(2000)
-                        .typeString(
-                          " Please don't hesitate to contact me if you have any questions!"
-                        )
+                        .pauseFor(1500)
+                        .typeString(" I really enjoyed making it!")
                         .pauseFor(2000)
                         .typeString(" Let's get started...")
                         .callFunction(() => {

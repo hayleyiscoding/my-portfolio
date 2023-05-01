@@ -14,6 +14,7 @@ import Testimonials from "./Testimonials";
 import Exploring from "./Exploring";
 import CoreSkills from "./CoreSkills";
 import Footer from "./Footer";
+import Guestbook from "./Guestbook";
 
 const Home = () => {
   return (
@@ -31,6 +32,7 @@ const Home = () => {
       <TweetLove />
       <Achievements />
       <Testimonials />
+      <Guestbook />
       <Contact />
       <Footer />
     </div>

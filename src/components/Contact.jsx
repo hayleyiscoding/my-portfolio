@@ -44,14 +44,14 @@ const Contact = () => {
             <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
-                <span className="relative font-semibold">Get in touch!</span>
+                <span className="relative font-semibold">Get in Touch</span>
               </span>
               <br className="block sm:hidden" />
             </h2>
           </div>
         </div>
 
-        <div className="mx-auto overflow-hidden bg-custom-black rounded-xl max-w-3xl">
+        <div className="mx-auto overflow-hidden bg-custom-black rounded-xl max-w-2xl">
           <div className="px-6">
             <form
               ref={form}
