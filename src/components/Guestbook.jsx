@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { BiDownArrowAlt } from "react-icons/bi";
 import { ethers } from "ethers";
-import GuestbookABI from "../artifacts/contracts/Guestbook.sol/Guestbook.json";
+import GuestbookABI from "/artifacts/contracts/Guestbook.sol/Guestbook.json";
 
 // deployed on polygon mainnet from 'web3' wallet
 const guestbookContractAddress = "0x00F8e2B75e754107D02D03bf0bbdfD9934e35631";
