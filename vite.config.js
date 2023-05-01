@@ -5,9 +5,10 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: {
-      external: [/^\/artifacts\/.*\.json$/],
-    },
+    // rollupOptions: {
+    //   external: [/^\/artifacts\/.*\.json$/],
+    // },
+    chunkSizeWarningLimit: 1000,
   },
   optimizeDeps: {
     exclude: ["swiper"],
