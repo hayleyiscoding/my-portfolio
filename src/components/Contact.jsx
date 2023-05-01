@@ -40,7 +40,7 @@ const Contact = () => {
     >
       <div className=" container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="text-center pt-0 md:mb-20">
+          <div className="text-center pt-0 md:mb-12">
             <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
@@ -49,6 +49,11 @@ const Contact = () => {
               <br className="block sm:hidden" />
             </h2>
           </div>
+          <p className=" mb-8 text-sm md:text-md font-lightleading-6 text-white text-opacity-70 max-w-xl mx-auto text-center px-5">
+            I'd love to hear from you! If you have any questions, comments or
+            feedback, please use the form below, or contact me on Twitter. My
+            email address is hayleyiscoding (@) gmail.com. Thanks!
+          </p>
         </div>
 
         <div className="mx-auto overflow-hidden bg-custom-black rounded-xl max-w-2xl">
@@ -56,7 +61,7 @@ const Contact = () => {
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="mt-14 bg-custom-black"
+              className="ml-4 mt-14 bg-custom-black p-2"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-8">
                 <div>

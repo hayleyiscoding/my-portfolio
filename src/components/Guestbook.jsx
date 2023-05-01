@@ -37,16 +37,6 @@ const Guestbook = () => {
     }
   };
 
-  // const disconnectWallet = async () => {
-  //   await window.ethereum.request({
-  //     method: "wallet_requestPermissions",
-  //     params: [
-  //       {
-  //         eth_accounts: {},
-  //       },
-  //     ],
-  //   });
-
   useEffect(() => {
     fetchMessages();
   }, []);
@@ -105,7 +95,7 @@ const Guestbook = () => {
   };
 
   return (
-    <section id="guestbook" className="py-24">
+    <section id="guestbook" className="py-20">
       <div className="container mx-auto bg-black max-w-2xl p-12 pt-24 md:border-2 border-gray-200 shadow-2xl">
         <div className="text-center pt-0">
           <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
@@ -161,7 +151,7 @@ const Guestbook = () => {
             </div>
           </form>
 
-          <div className="container mx-auto max-w-[18rem] custom-neumorphic-tech text-center mt-16 overflow-scroll h-[20rem] bg-black p-10 mb-24">
+          <div className="container mx-auto max-w-[18rem] custom-neumorphic-tech text-center mt-16 overflow-scroll h-[20rem] bg-black p-10 mb-6">
             {/* Display all messages */}
             {messages.length > 0 ? (
               messages
