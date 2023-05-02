@@ -20,14 +20,6 @@ const abi = GuestbookABI.abi;
 // Provider
 // const providerUrl = `https://polygon-mainnet.g.alchemy.com/v2/${alchemyKey}`;
 // const provider = new ethers.providers.JsonRpcProvider(providerUrl);
-const provider = new ethers.providers.Web3Provider(window.ethereum);
-
-// Contract Instance
-const guestBookContract = new ethers.Contract(
-  guestbookContractAddress,
-  abi,
-  provider
-);
 
 const Guestbook = () => {
   const { data: account } = useAccount();
