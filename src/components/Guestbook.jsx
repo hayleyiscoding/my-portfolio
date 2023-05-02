@@ -14,7 +14,6 @@ const Guestbook = () => {
 
   const requestAccount = async () => {
     if (window.ethereum) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
       console.log("Metamask detected");
 
       try {
@@ -33,7 +32,6 @@ const Guestbook = () => {
 
   const connectWallet = async () => {
     if (typeof window.ethereum !== "undefined") {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
       await requestAccount();
     }
   };
@@ -44,6 +42,7 @@ const Guestbook = () => {
 
   const fetchMessages = async () => {
     if (typeof window.ethereum !== "undefined") {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
       const contract = new ethers.Contract(
         guestbookContractAddress,
         GuestbookABI.abi,
