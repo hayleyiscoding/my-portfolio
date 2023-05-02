@@ -107,13 +107,13 @@ const Guestbook = () => {
           </h2>
         </div>
         <div>
-          <p className="mt-12 mb-8 text-sm md:text-md font-lightleading-6 text-white text-opacity-70 max-w-xs mx-auto text-center px-5">
-            Do you have a Metamask wallet? Say hello by signing my guestbook!
+          <p className="mt-12 mb-8 text-sm md:text-md font-light leading-5 text-white text-opacity-70 max-w-sm mx-auto text-center px-5">
+            Do you have a Metamask wallet? Please sign my guestbook!
             <br />
             <br />
             Please note that this guestbook has been created on the Polygon
-            Network, so you will pay a tiny gas fee in MATIC (perhaps 1c or
-            less) when signing. Thanks!
+            Network (blockchain), so you will pay a tiny gas fee in MATIC
+            (perhaps US$0.01 or less) when signing. Thanks!
           </p>
           <div className="text-center mb-10 mt-0">
             <button
@@ -134,7 +134,7 @@ const Guestbook = () => {
                   id="messageInput"
                   placeholder="Write 'Hello'!"
                   className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
-                  maxLength={100}
+                  maxLength={16}
                 />
               </div>
 
@@ -151,16 +151,16 @@ const Guestbook = () => {
             </div>
           </form>
 
-          <div className="container mx-auto max-w-[18rem] custom-neumorphic-tech text-center mt-16 overflow-scroll h-[20rem] bg-black p-10 mb-6">
+          <div className="container mx-auto md:max-w-[36rem] text-left custom-neumorphic-tech mt-16 overflow-scroll h-[20rem] bg-black p-5 md:p-10 mb-6">
             {/* Display all messages */}
             {messages.length > 0 ? (
               messages
                 ?.map((message, i) => (
                   <div
                     key={i}
-                    className="flex items-center justify-center mb-4 text-white text-sm font-extralight"
+                    className="flex items-center justify-start mb-4 text-white text-sm font-extralight gap-2"
                   >
-                    <p className="text-white mr-5">
+                    <p className="text-white text-opacity-70">
                       {`${message.visitor.substring(
                         0,
                         6
