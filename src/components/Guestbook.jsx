@@ -5,7 +5,6 @@ import GuestbookABI from "../assets/abi/Guestbook.json";
 
 // deployed on polygon mainnet from 'web3' wallet
 const guestbookContractAddress = "0x00F8e2B75e754107D02D03bf0bbdfD9934e35631";
-const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 const Guestbook = () => {
   const [message, setMessageValue] = useState("");
@@ -15,6 +14,7 @@ const Guestbook = () => {
 
   const requestAccount = async () => {
     if (window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
       console.log("Metamask detected");
 
       try {
@@ -33,6 +33,7 @@ const Guestbook = () => {
 
   const connectWallet = async () => {
     if (typeof window.ethereum !== "undefined") {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
       await requestAccount();
     }
   };
