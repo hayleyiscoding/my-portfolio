@@ -10,7 +10,7 @@ const guestbookContractAddress = "0x00F8e2B75e754107D02D03bf0bbdfD9934e35631";
 const Guestbook = () => {
   const { data: account, isConnected } = useAccount();
 
-  const [messageValue, setMessageValue] = useState("");
+  const [message, setMessage] = useState("");
 
   const { data: messages, isLoading: areMessagesLoading } = useContractRead({
     address: guestbookContractAddress,
@@ -22,7 +22,7 @@ const Guestbook = () => {
     address: guestbookContractAddress,
     abi: GuestbookABI.abi,
     functionName: "setMessage",
-    args: [messageValue],
+    args: [message],
   });
 
   const handleSubmit = async (event) => {
@@ -40,6 +40,7 @@ const Guestbook = () => {
       alert("Unable to post");
     } else {
       addMessage();
+      setMessageValue("");
     }
   };
 
@@ -89,7 +90,7 @@ const Guestbook = () => {
                   placeholder="Write 'Hello'!"
                   className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                   maxLength={16}
-                  onChange={(event) => setMessageValue(event.target.value)}
+                  onChange={(event) => setMessage(event.target.value)}
                 />
               </div>
 
