@@ -1,6 +1,6 @@
 import React from "react";
-import solidityPresentation from "../assets/projects/solidity-presentation.png";
-import womenWeb3Presentation from "../assets/projects/women-web3-presentation.png";
+import solidityPresentation from "../assets/presentations/solidity-presentation.png";
+import womenWeb3Presentation from "../assets/presentations/women-web3-presentation.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -10,15 +10,13 @@ const Presentations = () => {
       id="presentations"
       className="bg-custom-black sm:py-16 lg:py-6 mb-10 mt-96"
     >
-      <div className=" container py-24 px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="container py-24 px-4 mx-auto sm:px-6 lg:px-8">
         <div className="max-w-md mx-auto text-center">
           <div className="text-center pt-0">
             <h2 className="mt-36 text-4xl md:text-5xl font-extralight text-white md:mt-8">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
-                <span className="relative font-semibold custom-font-ysabeau">
-                  Presentations
-                </span>
+                <span className="relative font-semibold">Presentations</span>
               </span>
               <br className="block sm:hidden" />
             </h2>
@@ -31,20 +29,20 @@ const Presentations = () => {
         </div>
 
         <div className="md:flex justify-around">
-          <div className="mt-8 md:mt-12 rotate-img">
+          <div className="mt-8 md:mt-12 rotate-img w-full">
             <a
               href="https://www.youtube.com/watch?v=gWzAzkQoy-o&t=2939s"
               target="_blank"
             >
               <LazyLoadImage
-                className="text-white w-full max-w-md mx-auto cursor-pointer"
+                className="text-white w-[100%] max-w-md mx-auto cursor-pointer"
                 src={solidityPresentation}
                 effect="blur"
                 alt="Presentation that I did for the Encode Club Solidity Bootcamp"
               />
             </a>
           </div>
-          <div className="md:mt-12 rotate-img">
+          <div className="md:mt-12 rotate-img w-full">
             <a
               href="https://www.youtube.com/watch?v=_mut70FCiv4"
               target="_blank"
@@ -52,7 +50,7 @@ const Presentations = () => {
               <LazyLoadImage
                 className="text-white w-full max-w-md mx-auto cursor-pointer"
                 src={womenWeb3Presentation}
-                alt="Prsentation that I did for the Women Build Web3 Accelerator Program"
+                alt="Presentation that I did for the Women Build Web3 Accelerator Program"
               />
             </a>
           </div>

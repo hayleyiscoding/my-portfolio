@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import HayleyProfile from "../assets/hayley-profile.jpg";
+import blob from "../assets/blob.png";
 import { BiDownArrowAlt } from "react-icons/bi";
 import "animate.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -77,15 +77,22 @@ const About = () => {
             </div>
           </div>
 
-          <div className="relative md:order-2 pt-5 md:pt-0">
+          {/* <div className="relative md:order-2 pt-5 md:pt-0">
             <LazyLoadImage
               className="text-white grayscale absolute inset-x-0 bottom-45 -mb-48 -translate-x-1/2 left-1/2 contract-200 mt-10 lg:mt-0"
               src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg"
               alt="Background blob"
+            /> */}
+
+          <div className="relative md:order-2 pt-5 md:pt-0">
+            <LazyLoadImage
+              className="text-white grayscale absolute inset-x-0 bottom-45 -mb-48 -translate-x-1/2 left-1/2 mt-10 lg:mt-20 rotate-30"
+              src={blob}
+              alt="Background blob"
             />
 
             <LazyLoadImage
-              className="text-white grayscale relative w-full md:max-w-xs xl:max-w-md xl:mx-auto 2xl:origin-bottom 2xl:scale-110 fancy-border-radius p-12 pb-2 md:p-14"
+              className="text-white grayscale relative w-full md:max-w-xs xl:max-w-md xl:mx-auto 2xl:origin-bottom 2xl:scale-110 fancy-border-radius p-12pb-2 md:p-14"
               src={HayleyProfile}
               alt="Hayley's profile picture"
               effect="blur"

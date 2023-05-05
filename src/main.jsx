@@ -9,8 +9,6 @@ import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { polygon } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
-// import dotenv from "dotenv";
-// dotenv.config({ path: "./.env.local" });
 
 const alchemyId = import.meta.env.VITE_ALCHEMY_API_KEY;
 

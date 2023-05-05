@@ -1,8 +1,10 @@
 import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import Intro from "./components/Intro";
 import Error404 from "./components/404";
 import Home from "./components/Home";
+import Loader from "./components/Loader";
 
 import { QueryClient, QueryClientProvider } from "react-query";
 

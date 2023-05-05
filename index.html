@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,9 +11,55 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hayley's Portfolio</title>
+    <style>
+      .loader-container {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      .loader span {
+        font-size: 28px;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 600;
+        animation: blur 2.5s linear infinite;
+        line-height: 20px;
+        transition: all 0.5s;
+        letter-spacing: 0.2em;
+        color: white;
+      }
+
+      @keyframes blur {
+        0%,
+        90% {
+          filter: blur(0);
+        }
+
+        50% {
+          filter: blur(3px);
+        }
+      }
+
+      body {
+        background-color: #191a21;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loader-container">
+        <div class="loader">
+          <span>L</span>
+          <span>O</span>
+          <span>A</span>
+          <span>D</span>
+          <span>I</span>
+          <span>N</span>
+          <span>G</span>
+          <span>.</span>
+          <span>.</span>
+          <span>.</span>
+        </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

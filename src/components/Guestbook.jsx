@@ -18,12 +18,13 @@ const Guestbook = () => {
     functionName: "getAllMessages",
   });
 
-  const { write: addMessage, isLoading: isLoadingWrite } = useContractWrite({
-    address: guestbookContractAddress,
-    abi: GuestbookABI.abi,
-    functionName: "setMessage",
-    args: [message],
-  });
+  const { writeAsync: addMessage, isLoading: isLoadingWrite } =
+    useContractWrite({
+      address: guestbookContractAddress,
+      abi: GuestbookABI.abi,
+      functionName: "setMessage",
+      args: [message],
+    });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -39,8 +40,8 @@ const Guestbook = () => {
     ) {
       alert("Unable to post");
     } else {
-      addMessage();
-      setMessageValue("");
+      await addMessage();
+      setMessage("");
     }
   };
 
@@ -91,6 +92,7 @@ const Guestbook = () => {
                   className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                   maxLength={16}
                   onChange={(event) => setMessage(event.target.value)}
+                  disabled={isLoadingWrite}
                 />
               </div>
 
@@ -101,7 +103,7 @@ const Guestbook = () => {
                 Sign Guestbook
                 <div
                   className={`w-3 h-6 ml-2 mt-1 ${
-                    isLoadingWrite ? "animation-spin" : ""
+                    isLoadingWrite ? "animate-spin" : ""
                   }`}
                 >
                   {" "}
@@ -111,7 +113,7 @@ const Guestbook = () => {
             </div>
           </form>
 
-          <div className="container mx-auto md:max-w-[36rem] text-left custom-neumorphic-tech mt-16 overflow-scroll h-[20rem] bg-black p-5 md:p-10 mb-6">
+          <div className="container mx-auto md:max-w-[21rem] text-left custom-neumorphic-tech mt-16 mb-10  overflow-y-auto h-[20rem] bg-black pt-5 pr-5 pl-5 pb-0 md:p-10">
             {/* Display all messages */}
             {!areMessagesLoading ? (
               messages
