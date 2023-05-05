@@ -541,18 +541,18 @@ export const testimonialData = [
   },
   {
     id: 6,
-    avatar: camiAvatar,
-    name: "Cami",
-    company: "Head of DevRel, Fuel Network",
-    testimonial: "👏👏👏👏 Proud of you!",
+    avatar: matheusAvatar,
+    name: "Matheus Pagani",
+    company: "CEO, BFT Solutions",
+    testimonial: `Congratulations @hayleyiscoding! You have 'mined' this NFT with true talent and enduring effort! Super deserved. You are 🔥`,
   },
   {
     id: 7,
-    avatar: kristenAvatar,
-    name: "Kristen",
-    company: "Women Build Web3",
+    avatar: sallyAvatar,
+    name: "Sally",
+    company: "Bubble Blowers Swim School",
     testimonial:
-      "Hayley, holy smokes! This was such an awesome article to read... You've got yourself a new Hashnode subscriber :D",
+      "Hayley did an amazing job with our website! She really captured the essence of what Bubble Blowers is all about. I was able to increase my student numbers dramatically after the website launch.",
   },
   {
     id: 8,

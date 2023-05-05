@@ -84,7 +84,7 @@ const About = () => {
               alt="Background blob"
             /> */}
 
-          <div className="relative md:order-2 pt-5 md:pt-0">
+          <div className="relative md:order-2 mt-10 md:pt-0">
             <LazyLoadImage
               className="text-white grayscale absolute inset-x-0 bottom-45 -mb-48 -translate-x-1/2 left-1/2 mt-10 lg:mt-20 rotate-30"
               src={blob}
@@ -92,7 +92,7 @@ const About = () => {
             />
 
             <LazyLoadImage
-              className="text-white grayscale relative w-full md:max-w-xs xl:max-w-md xl:mx-auto 2xl:origin-bottom 2xl:scale-110 fancy-border-radius p-12pb-2 md:p-14"
+              className="text-white grayscale relative md:max-w-xs xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110 fancy-border-radius pb-2 p-5 lg:w-[25rem] md:p-14 lg:p-5"
               src={HayleyProfile}
               alt="Hayley's profile picture"
               effect="blur"
