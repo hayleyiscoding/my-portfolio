@@ -8,7 +8,6 @@ import {
   useDisconnect,
   useContractRead,
   useContractWrite,
-  usePrepareContractWrite,
 } from "wagmi";
 
 // Contract Address - deployed on polygon mainnet from 'web3' wallet
@@ -16,18 +15,17 @@ const guestbookContractAddress = "0x00F8e2B75e754107D02D03bf0bbdfD9934e35631";
 
 const Guestbook = () => {
   const { data: account, isConnected } = useAccount();
-  const { disconnect } = useDisconnect();
+  // const { disconnect } = useDisconnect();
 
-  const [message, setMessage] = useState("");
-  const [walletAddress, setWalletAddress] = useState("");
+  const [messageValue, setMessageValue] = useState("");
 
-  const { data: messages, isLoading: isMessagesLoading } = useContractRead({
+  const { data: messages, isLoading: areMessagesLoading } = useContractRead({
     address: guestbookContractAddress,
     abi: GuestbookABI.abi,
     functionName: "getAllMessages",
   });
 
-  const { write: addMessage } = useContractWrite({
+  const { write: addMessage, isLoading: isLoadingWrite } = useContractWrite({
     address: guestbookContractAddress,
     abi: GuestbookABI.abi,
     functionName: "setMessage",
@@ -52,6 +50,8 @@ const Guestbook = () => {
     }
   };
 
+  if (isLoadingWrite) return "Loading...";
+
   return (
     <section id="guestbook" className="py-20">
       <div className="container mx-auto bg-black max-w-2xl p-12 pt-24 md:border-2 border-gray-200 shadow-2xl">
@@ -71,17 +71,10 @@ const Guestbook = () => {
             <br />
             <br />
             Please note that this guestbook has been created on the Polygon
-            Network (blockchain), so you will pay a tiny gas fee in MATIC
-            (perhaps US$0.01 or less) when signing. Thanks!
+            Network (blockchain), so you will pay a tiny gas fee in MATIC when
+            signing. Thanks!
           </p>
           <div className="flex justify-center text-center mb-10 mt-0">
-            {/* <button
-              type="submit"
-              onClick={connectWallet}
-              className="cursor-pointer inline-flex font-light items-center justify-center px-6 py-3 mt-0 text-sm leading-5 text-white transition-all duration-200 bg-custom-red border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white"
-            >
-              {walletAddress ? "Connected" : "Connect Wallet"}
-            </button> */}
             {account ? (
               <button>
                 <p>{account.address}</p>
@@ -113,7 +106,7 @@ const Guestbook = () => {
                     placeholder="Write 'Hello'!"
                     className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                     maxLength={16}
-                    onChange={(event) => setMessage(event.target.value)}
+                    onChange={(event) => setMessageValue(event.target.value)}
                   />
                 </div>
 
@@ -133,7 +126,7 @@ const Guestbook = () => {
 
           <div className="container mx-auto md:max-w-[36rem] text-left custom-neumorphic-tech mt-16 overflow-scroll h-[20rem] bg-black p-5 md:p-10 mb-6">
             {/* Display all messages */}
-            {!isMessagesLoading ? (
+            {!areMessagesLoading ? (
               messages
                 ?.map((message, i) => (
                   <div
