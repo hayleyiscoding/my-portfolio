@@ -29,7 +29,7 @@ const Guestbook = () => {
     address: guestbookContractAddress,
     abi: GuestbookABI.abi,
     functionName: "setMessage",
-    args: [message],
+    args: [messageValue],
   });
 
   const handleSubmit = async (event) => {
@@ -49,8 +49,6 @@ const Guestbook = () => {
       addMessage();
     }
   };
-
-  if (isLoadingWrite) return "Loading...";
 
   return (
     <section id="guestbook" className="py-20">
