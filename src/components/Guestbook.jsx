@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { BiDownArrowAlt } from "react-icons/bi";
 import { ethers } from "ethers";
-import GuestbookABI from "/src/assets/abi/Guestbook.json";
+import GuestbookABI from "../assets/abi/Guestbook.json";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import {
   useAccount,
@@ -14,102 +14,29 @@ import {
 // Contract Address - deployed on polygon mainnet from 'web3' wallet
 const guestbookContractAddress = "0x00F8e2B75e754107D02D03bf0bbdfD9934e35631";
 
-// abi
-const abi = GuestbookABI.abi;
-
-// Provider
-// const providerUrl = `https://polygon-mainnet.g.alchemy.com/v2/${alchemyKey}`;
-// const provider = new ethers.providers.JsonRpcProvider(providerUrl);
-
 const Guestbook = () => {
-  const { data: account } = useAccount();
+  const { data: account, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
 
-  const [message, setMessageValue] = useState("");
-  const [messages, setMessages] = useState([]);
+  const [message, setMessage] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
 
-  const requestAccount = async () => {
-    if (window.ethereum) {
-      console.log("Metamask detected");
-
-      try {
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        setWalletAddress(accounts[0]);
-      } catch (error) {
-        console.log("Error connecting...");
-      }
-    } else {
-      console.log("Metamask not detected");
-    }
-  };
-
-  useEffect(() => {
-    fetchMessages();
-  }, []);
-
-  const {
-    data: readData,
-    isError,
-    isLoading: isLoadingRead,
-  } = useContractRead({
+  const { data: messages, isLoading: isMessagesLoading } = useContractRead({
     address: guestbookContractAddress,
-    abi: abi,
+    abi: GuestbookABI.abi,
     functionName: "getAllMessages",
   });
 
-  const { config } = usePrepareContractWrite({
+  const { write: addMessage } = useContractWrite({
     address: guestbookContractAddress,
-    abi: abi,
+    abi: GuestbookABI.abi,
     functionName: "setMessage",
+    args: [message],
   });
-  const {
-    data,
-    isLoading: isLoadingWrite,
-    isSuccess,
-    write,
-  } = useContractWrite(config);
-
-  const fetchMessages = async () => {
-    if (typeof window.ethereum !== "undefined") {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(
-        guestbookContractAddress,
-        GuestbookABI.abi,
-        signer
-      );
-      try {
-        const data = await contract.getAllMessages();
-        setMessages(data);
-        console.log("data: ", data);
-      } catch (err) {
-        console.log("Error: ", err);
-      }
-    }
-  };
-
-  const setMessage = async (value) => {
-    if (!value) return;
-    if (!typeof window.ethereum !== "undefined") {
-      await requestAccount();
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(
-        guestbookContractAddress,
-        GuestbookABI.abi,
-        signer
-      );
-      const transaction = await contract.setMessage(value);
-      await transaction.wait();
-      fetchMessages();
-    }
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     if (
       event.target.messageInput.value.toLowerCase().includes("fuck") ||
       event.target.messageInput.value.toLowerCase().includes("f*ck") ||
@@ -121,9 +48,7 @@ const Guestbook = () => {
     ) {
       alert("Unable to post");
     } else {
-      await setMessage(event.target.messageInput.value);
-      setMessageValue(event.target.messageInput.value);
-      event.target.messageInput.value = "";
+      addMessage();
     }
   };
 
@@ -157,7 +82,6 @@ const Guestbook = () => {
             >
               {walletAddress ? "Connected" : "Connect Wallet"}
             </button> */}
-
             {account ? (
               <button>
                 <p>{account.address}</p>
@@ -165,7 +89,7 @@ const Guestbook = () => {
             ) : (
               <>
                 <div>
-                  <ConnectButton disabled={!write} onClick={() => write?.()} />
+                  <ConnectButton />
                 </div>
                 {/* <div>
                   {isLoadingWrite && <div>Check Wallet</div>}
@@ -175,35 +99,41 @@ const Guestbook = () => {
             )}
           </div>
 
-          <form onSubmit={handleSubmit} className=" bg-black max-w-sm mx-auto">
-            <div className="grid place-items-center">
-              <div className="relative w-[60%]">
-                <input
-                  type="text"
-                  name="messageInput"
-                  id="messageInput"
-                  placeholder="Write 'Hello'!"
-                  className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
-                  maxLength={16}
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="cursor-pointer inline-flex items-center justify-center px-6 py-3 mt-12 text-sm font-light leading-5 text-white transition-all duration-200 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white"
-              >
-                Sign Guestbook
-                <div className="w-3 h-6 ml-2 mt-1">
-                  {" "}
-                  <BiDownArrowAlt size={20} />
+          {isConnected && (
+            <form
+              onSubmit={handleSubmit}
+              className=" bg-black max-w-sm mx-auto"
+            >
+              <div className="grid place-items-center">
+                <div className="relative w-[60%]">
+                  <input
+                    type="text"
+                    name="messageInput"
+                    id="messageInput"
+                    placeholder="Write 'Hello'!"
+                    className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                    maxLength={16}
+                    onChange={(event) => setMessage(event.target.value)}
+                  />
                 </div>
-              </button>
-            </div>
-          </form>
+
+                <button
+                  type="submit"
+                  className="cursor-pointer inline-flex items-center justify-center px-6 py-3 mt-12 text-sm font-light leading-5 text-white transition-all duration-200 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white"
+                >
+                  Sign Guestbook
+                  <div className="w-3 h-6 ml-2 mt-1">
+                    {" "}
+                    <BiDownArrowAlt size={20} />
+                  </div>
+                </button>
+              </div>
+            </form>
+          )}
 
           <div className="container mx-auto md:max-w-[36rem] text-left custom-neumorphic-tech mt-16 overflow-scroll h-[20rem] bg-black p-5 md:p-10 mb-6">
             {/* Display all messages */}
-            {messages.length > 0 ? (
+            {!isMessagesLoading ? (
               messages
                 ?.map((message, i) => (
                   <div

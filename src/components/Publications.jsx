@@ -117,7 +117,7 @@ const Publications = () => {
         <div
           id="animate-element"
           className={`md:flex justify-around align-center gap-5 w-full md:max-w-7xl my-12 mt-20 mx-auto pt-20 ${
-            animate ? "animate__animated animate__flip" : ""
+            animate ? "animate__animated animate__fadeIn" : ""
           }`}
         >
           {" "}
