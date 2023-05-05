@@ -1,21 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BiDownArrowAlt } from "react-icons/bi";
-import { ethers } from "ethers";
 import GuestbookABI from "../assets/abi/Guestbook.json";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import {
-  useAccount,
-  useDisconnect,
-  useContractRead,
-  useContractWrite,
-} from "wagmi";
+import { useAccount, useContractRead, useContractWrite } from "wagmi";
 
 // Contract Address - deployed on polygon mainnet from 'web3' wallet
 const guestbookContractAddress = "0x00F8e2B75e754107D02D03bf0bbdfD9934e35631";
 
 const Guestbook = () => {
   const { data: account, isConnected } = useAccount();
-  // const { disconnect } = useDisconnect();
 
   const [messageValue, setMessageValue] = useState("");
 
@@ -82,45 +75,40 @@ const Guestbook = () => {
                 <div>
                   <ConnectButton />
                 </div>
-                {/* <div>
-                  {isLoadingWrite && <div>Check Wallet</div>}
-                  {isSuccess && <div>Transaction: {JSON.stringify(data)}</div>}
-                </div> */}
               </>
             )}
           </div>
 
-          {isConnected && (
-            <form
-              onSubmit={handleSubmit}
-              className=" bg-black max-w-sm mx-auto"
-            >
-              <div className="grid place-items-center">
-                <div className="relative w-[60%]">
-                  <input
-                    type="text"
-                    name="messageInput"
-                    id="messageInput"
-                    placeholder="Write 'Hello'!"
-                    className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
-                    maxLength={16}
-                    onChange={(event) => setMessageValue(event.target.value)}
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="cursor-pointer inline-flex items-center justify-center px-6 py-3 mt-12 text-sm font-light leading-5 text-white transition-all duration-200 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white"
-                >
-                  Sign Guestbook
-                  <div className="w-3 h-6 ml-2 mt-1">
-                    {" "}
-                    <BiDownArrowAlt size={20} />
-                  </div>
-                </button>
+          <form onSubmit={handleSubmit} className=" bg-black max-w-sm mx-auto">
+            <div className="grid place-items-center">
+              <div className="relative w-[60%]">
+                <input
+                  type="text"
+                  name="messageInput"
+                  id="messageInput"
+                  placeholder="Write 'Hello'!"
+                  className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                  maxLength={16}
+                  onChange={(event) => setMessageValue(event.target.value)}
+                />
               </div>
-            </form>
-          )}
+
+              <button
+                type="submit"
+                className="cursor-pointer inline-flex items-center justify-center px-6 py-3 mt-12 text-sm font-light leading-5 text-white transition-all duration-200 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white"
+              >
+                Sign Guestbook
+                <div
+                  className={`w-3 h-6 ml-2 mt-1 ${
+                    isLoadingWrite ? "animation-spin" : ""
+                  }`}
+                >
+                  {" "}
+                  <BiDownArrowAlt size={20} />
+                </div>
+              </button>
+            </div>
+          </form>
 
           <div className="container mx-auto md:max-w-[36rem] text-left custom-neumorphic-tech mt-16 overflow-scroll h-[20rem] bg-black p-5 md:p-10 mb-6">
             {/* Display all messages */}
