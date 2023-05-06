@@ -23,8 +23,8 @@ const Presentations = () => {
           </div>
           <p className="mt-12 text-sm md:text-md font-light leading-6 text-white text-opacity-70">
             Video recordings of the final presentations of my projects for the
-            3-month Women Build Web3 Accelerator Program (Dec 2022) and the
-            Encode Club Solidity Bootcamp (Apr 2023)
+            Women Build Web3 Accelerator Program (Dec 2022) and the Encode Club
+            Solidity Bootcamp (Apr 2023)
           </p>
         </div>
 

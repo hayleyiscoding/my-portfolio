@@ -76,6 +76,7 @@ const Navbar = () => {
               <a
                 href="https://twitter.com/hayleyiscoding"
                 target="_blank"
+                rel="noopener"
                 className="flex ml-1 md:ml-2 md:mr-24 mb-2 md:w-9"
               >
                 <div className="h-6 p-1 md:h-8 bg-custom-red text-white flex justify-center items-center rounded-sm">
@@ -85,6 +86,7 @@ const Navbar = () => {
               <a
                 href="https://www.linkedin.com/in/hayleyiscoding/"
                 target="_blank"
+                rel="noopener"
                 className="flex ml-1 md:ml-2 md:mr-24 mb-2 w-2 md:w-9"
               >
                 <div className="h-6 p-1 md:h-8 bg-custom-red text-white flex justify-between items-center rounded-sm">
@@ -94,6 +96,7 @@ const Navbar = () => {
               <a
                 href="https://hayleyiscoding.hashnode.dev/"
                 target="_blank"
+                rel="noopener"
                 className="flex ml-1 md:ml-2 md:mr-24 w-2 md:w-9"
               >
                 <div className="h-6 p-1 md:h-8 bg-custom-red text-white flex justify-center items-center rounded-sm">
@@ -196,7 +199,6 @@ const Navbar = () => {
       </aside>
 
       {/* mobile menu */}
-
       <div
         className={`fixed z-10 h-full bg-custom-black dark:bg-custom-black w-screen animate__animated animate__fadeInLeft ${
           showSidebar ? "visible md:hidden" : "hidden"

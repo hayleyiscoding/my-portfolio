@@ -33,40 +33,30 @@ const Greeting = (props) => {
               <div id="container">
                 <div
                   id="typewriter"
-                  className="text-sm md:text-lg font-extralight text-opacity-90 leading-5 md:leading-8 overflow-y-scroll h-auto"
+                  className="text-md md:text-lg font-extralight text-opacity-90 leading-5 md:leading-8 h-auto"
                 >
                   <Typewriter
                     onInit={(typewriter) => {
                       typewriter
-                        .typeString("How are you?")
-                        .pauseFor(1500)
-                        .typeString(" Oh wait, just a second... ")
-                        .pauseFor(1500)
-                        .typeString(" aren't these fireworks annoying?!")
-                        .pauseFor(1500)
+                        .typeString(" Aren't these fireworks annoying?! ")
+                        .pauseFor(2000)
                         .typeString(
-                          " Move your mouse to the bottom of the screen (or tap on mobile) to move them out the way!"
+                          " Move your mouse cursor down to move them out the way!"
                         )
+                        .pauseFor(1500)
+                        .typeString(" Or tap anywhere on mobile...")
                         .pauseFor(7000)
                         .typeString(" Great! Now that that's done...")
                         .pauseFor(1500)
                         .typeString(
-                          " My name is Hayley (known online as @hayleyiscoding)."
+                          " How are you? My name is Hayley (known online as @hayleyiscoding)."
                         )
                         .pauseFor(1500)
-                        .typeString(" I just wanted to say welcome and...")
+                        .typeString(
+                          " I just wanted to say welcome and thank you for taking a moment to view my portfolio!"
+                        )
                         .pauseFor(1000)
-                        .typeString(
-                          " maybe you can tell that I'm excited that you're here!"
-                        )
-                        .pauseFor(1500)
-                        .typeString(
-                          " Thank you for taking a moment to view my portfolio..."
-                        )
-                        .pauseFor(1500)
-                        .typeString(" I really enjoyed making it!")
-                        .pauseFor(2000)
-                        .typeString(" Let's get started...")
+
                         .callFunction(() => {
                           setShowButton(true);
                         })
@@ -88,11 +78,11 @@ const Greeting = (props) => {
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        stroke-width="2"
+                        strokeWidth="2"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           d="M13 7l5 5m0 0l-5 5m5-5H6"
                         />
                       </svg>

@@ -88,7 +88,7 @@ const Publications = () => {
                     <a
                       href={`https://hayleyiscoding.hashnode.dev/${post.slug}`}
                       target="_blank"
-                      title=""
+                      rel="noopener"
                     >
                       {" "}
                       {post.title}

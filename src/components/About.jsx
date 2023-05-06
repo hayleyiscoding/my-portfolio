@@ -54,11 +54,11 @@ const About = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M13 7l5 5m0 0l-5 5m5-5H6"
                   />
                 </svg>
@@ -76,13 +76,6 @@ const About = () => {
               </Link>
             </div>
           </div>
-
-          {/* <div className="relative md:order-2 pt-5 md:pt-0">
-            <LazyLoadImage
-              className="text-white grayscale absolute inset-x-0 bottom-45 -mb-48 -translate-x-1/2 left-1/2 contract-200 mt-10 lg:mt-0"
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg"
-              alt="Background blob"
-            /> */}
 
           <div className="relative md:order-2 mt-10 md:pt-0">
             <LazyLoadImage

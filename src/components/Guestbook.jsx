@@ -12,7 +12,11 @@ const Guestbook = () => {
 
   const [message, setMessage] = useState("");
 
-  const { data: messages, isLoading: areMessagesLoading } = useContractRead({
+  const {
+    data: messages,
+    isLoading: areMessagesLoading,
+    refetch: refetchMessages,
+  } = useContractRead({
     address: guestbookContractAddress,
     abi: GuestbookABI.abi,
     functionName: "getAllMessages",
@@ -40,14 +44,16 @@ const Guestbook = () => {
     ) {
       alert("Unable to post");
     } else {
-      await addMessage();
+      const tx = await addMessage();
+      await tx.wait();
       setMessage("");
+      await refetchMessages();
     }
   };
 
   return (
     <section id="guestbook" className="py-20">
-      <div className="container mx-auto bg-custom-black max-w-2xl p-12 pt-24 custom-neumorphic-tech lg:border-2 lg:border-white">
+      <div className="container mx-auto bg-custom-black max-w-2xl p-12 pt-24 md:custom-neumorphic-tech lg:border-2 lg:border-white">
         <div className="text-center pt-0">
           <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
             <span className="relative inline-block">
@@ -91,6 +97,7 @@ const Guestbook = () => {
                   type="text"
                   name="messageInput"
                   id="messageInput"
+                  value={message}
                   placeholder="Write 'Hello'!"
                   className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                   maxLength={16}
@@ -116,7 +123,7 @@ const Guestbook = () => {
             </div>
           </form>
 
-          <div className="container mx-auto md:max-w-[21rem] text-left custom-neumorphic-tech mt-16 mb-10  overflow-y-auto h-[20rem] bg-black pt-5 pr-5 pl-5 pb-0 md:p-10">
+          <div className="container mx-auto md:max-w-[21rem] text-left custom-neumorphic-tech mt-16 mb-10  overflow-y-scroll h-[20rem] bg-black pt-5 pr-5 pl-5 pb-0 md:p-10">
             {/* Display all messages */}
             {!areMessagesLoading ? (
               messages

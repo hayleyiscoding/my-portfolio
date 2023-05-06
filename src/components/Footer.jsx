@@ -11,8 +11,7 @@ const Footer = () => {
           <ul className="flex items-center justify-center space-x-6 sm:justify-end sm:order-2">
             <li>
               <a
-                href="#"
-                title=""
+                href="https://twitter.com/hayleyiscoding"
                 target="_blank"
                 rel="noopener"
                 className="inline-flex transition-all duration-200 rounded text-white focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-primary focus:ring-offset-secondary"
@@ -31,8 +30,7 @@ const Footer = () => {
 
             <li>
               <a
-                href="#"
-                title=""
+                href="https://www.linkedin.com/in/hayleyiscoding/"
                 target="_blank"
                 rel="noopener"
                 className="inline-flex transition-all duration-200 rounded text-white focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-primary focus:ring-offset-secondary"
@@ -52,8 +50,7 @@ const Footer = () => {
 
             <li>
               <a
-                href="#"
-                title=""
+                href="https://github.com/hayleyiscoding"
                 target="_blank"
                 rel="noopener"
                 className="inline-flex transition-all duration-200 rounded text-white focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-primary focus:ring-offset-secondary"

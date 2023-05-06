@@ -18,7 +18,7 @@ import Guestbook from "./Guestbook";
 
 const Home = () => {
   return (
-    <div className="bg-custom-black">
+    <main className="bg-custom-black">
       <Navbar />
       <About />
       <CoreSkills />
@@ -35,7 +35,7 @@ const Home = () => {
       <Guestbook />
       <Contact />
       <Footer />
-    </div>
+    </main>
   );
 };
 

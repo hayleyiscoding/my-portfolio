@@ -16,17 +16,6 @@ html {
   --swiper-theme-color: red;
 }
 
-@keyframes blur {
-  0%,
-  90% {
-    filter: blur(0);
-  }
-
-  50% {
-    filter: blur(10px);
-  }
-}
-
 .fancy-border-radius {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
@@ -35,6 +24,7 @@ html {
   border-radius: 59% 41% 46% 54% / 41% 43% 57% 59%;
 }
 
+/* Custom Input Box */
 input {
   color: white;
   font-size: 1rem;
@@ -63,109 +53,7 @@ input::placeholder {
   padding-top: 1rem;
 }
 
-canvas {
-  position: relative;
-  z-index: 10;
-}
-
-.red-btn {
-  position: absolute;
-  z-index: 20;
-}
-
-h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  /* border-right: 0.15em solid red;
-  border-left: 0.15em solid red; */
-  border-bottom-left-radius: 10%;
-  border-top-right-radius: 10%;
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  padding-left: 3rem;
-  padding-right: 3rem;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end;
-}
-
-.greeting {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid red;
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: red;
-  }
-}
-
-.custom-red-box-shadow {
-  box-shadow: 10px 10px 0px -7px rgba(255, 0, 0, 0.88);
-  -webkit-box-shadow: 10px 10px 0px -7px rgba(255, 0, 0, 0.88);
-  -moz-box-shadow: 10px 10px 0px -7px rgba(255, 0, 0, 0.88);
-}
-
-.custom-text-shadow {
-  text-shadow: 0 0 0.8px hsl(0, 100%, 50%), 0 0 1.6px hsl(0, 100%, 50%),
-    /* 0 0 2.4px hsl(0, 100%, 50%), 0 0 3.2px hsl(0, 100%, 50%), */ 0 0 4px
-      hsl(0, 100%, 50%),
-    0 0 4.8px hsl(0, 100%, 50%);
-  /* 0 0 5.6px hsl(0, 100%, 50%), 0 0 6.4px hsl(0, 100%, 50%); */
-  /* 0 0 7.2px hsl(0, 100%, 50%), 0 0 8px hsl(0, 100%, 50%); */
-}
-
-a {
-  --s: 0.2em; /* the thickness of the line */
-  --c: hsl(0, 100%, 50%); /* the color */
-
-  color: white;
-  padding-bottom: var(--s);
-  background: linear-gradient(90deg, var(--c) 50%, #000 0)
-      calc(100% - var(--_p, 0%)) / 200% 100%,
-    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
-  -webkit-background-clip: text, padding-box;
-  background-clip: text, padding-box;
-  transition: 0.5s;
-}
-a:hover {
-  --_p: 100%;
-}
-
-aside a {
-  --s: 0em !important;
-}
-
-h5 {
-  --s: 0.1em; /* the thickness of the line */
-  --c: hsl(0, 100%, 50%); /* the color */
-
-  color: white;
-  padding-bottom: var(--s);
-  background: linear-gradient(90deg, var(--c) 50%, #000 0)
-      calc(100% - var(--_p, 0%)) / 200% 100%,
-    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
-  -webkit-background-clip: text, padding-box;
-  background-clip: text, padding-box;
-  transition: 0.5s;
-}
-h5:hover {
-  --_p: 100%;
-}
-
+/* Custom Styles */
 .custom-superscript {
   font-size: 0.6em;
   line-height: 0.3em;
@@ -175,13 +63,11 @@ h5:hover {
 }
 
 .custom-zoom {
-  transition: transform 0.1s; /* Animation */
+  transition: transform 0.1s;
 }
 
 .custom-zoom:hover {
-  transform: scale(
-    1.05
-  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.05);
 }
 
 .custom-neumorphic-tech {
@@ -223,8 +109,112 @@ h5:hover {
   margin-top: 210px;
 }
 
-/* Swiper */
+.custom-red-box-shadow {
+  box-shadow: 10px 10px 0px -7px rgba(255, 0, 0, 0.88);
+  -webkit-box-shadow: 10px 10px 0px -7px rgba(255, 0, 0, 0.88);
+  -moz-box-shadow: 10px 10px 0px -7px rgba(255, 0, 0, 0.88);
+}
 
+.custom-text-shadow {
+  text-shadow: 0 0 0.8px hsl(0, 100%, 50%), 0 0 1.6px hsl(0, 100%, 50%),
+    /* 0 0 2.4px hsl(0, 100%, 50%), 0 0 3.2px hsl(0, 100%, 50%), */ 0 0 4px
+      hsl(0, 100%, 50%),
+    0 0 4.8px hsl(0, 100%, 50%);
+  /* 0 0 5.6px hsl(0, 100%, 50%), 0 0 6.4px hsl(0, 100%, 50%); */
+  /* 0 0 7.2px hsl(0, 100%, 50%), 0 0 8px hsl(0, 100%, 50%); */
+}
+
+/* Fireworks */
+canvas {
+  position: relative;
+  z-index: 10;
+}
+.red-btn {
+  position: absolute;
+  z-index: 20;
+}
+
+/* Typewriter */
+h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /* border-right: 0.15em solid red;
+  border-left: 0.15em solid red; */
+  border-bottom-left-radius: 10%;
+  border-top-right-radius: 10%;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  padding-left: 3rem;
+  padding-right: 3rem;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end;
+}
+
+.greeting {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid red;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: red;
+  }
+}
+
+a {
+  --s: 0.2em; /* the thickness of the line */
+  --c: hsl(0, 100%, 50%); /* the color */
+
+  color: white;
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+a:hover {
+  --_p: 100%;
+}
+
+aside a {
+  --s: 0em !important;
+}
+
+h5 {
+  --s: 0.1em; /* the thickness of the line */
+  --c: hsl(0, 100%, 50%); /* the color */
+
+  color: white;
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+
+h5:hover {
+  --_p: 100%;
+}
+
+/* Swiper */
 .swiper-slide {
   background-position: center;
   background-size: cover;
@@ -238,22 +228,6 @@ h5:hover {
     height: auto;
   }
 }
-/* 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-} */
-
-/* .container {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  background-color: #000;
-  display: block;
-} */
 
 .container .swiper-container {
   width: 70%;

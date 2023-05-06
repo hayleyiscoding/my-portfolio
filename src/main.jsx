@@ -14,7 +14,7 @@ const alchemyId = import.meta.env.VITE_ALCHEMY_API_KEY;
 
 const { chains, provider } = configureChains(
   [polygon],
-  [alchemyProvider({ alchemyId }), publicProvider()]
+  [alchemyProvider({ apiKey: alchemyId }), publicProvider()]
 );
 
 const { connectors } = getDefaultWallets({

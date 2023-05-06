@@ -77,11 +77,11 @@ const Workshops = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    stroke-width="2"
+                    strokeWidth="2"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                     />
                   </svg>
@@ -181,6 +181,7 @@ const Workshops = () => {
                                   <a
                                     href={workshop.url}
                                     target="_blank"
+                                    rel="noopener"
                                     className="inline-flex items-center px-8 md:px-10 py-1 md:py-2 text-sm font-light text-white transition-all duration-200 bg-black border border-1 border-white rounded-md shadow-sm focus:outline-none hover:text-white hover:opacity-90 focus:ring-2 focus:ring-offset-1 focus:ring-white"
                                   >
                                     Visit
