@@ -3,12 +3,14 @@ import { BiDownArrowAlt } from "react-icons/bi";
 import GuestbookABI from "../assets/abi/Guestbook.json";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useContractRead, useContractWrite } from "wagmi";
+import { is } from "date-fns/locale";
 
 // Contract Address - deployed on polygon mainnet from 'web3' wallet
 const guestbookContractAddress = "0x00F8e2B75e754107D02D03bf0bbdfD9934e35631";
 
 const Guestbook = () => {
   const { data: account, isConnected } = useAccount();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [message, setMessage] = useState("");
 
@@ -22,13 +24,16 @@ const Guestbook = () => {
     functionName: "getAllMessages",
   });
 
-  const { writeAsync: addMessage, isLoading: isLoadingWrite } =
-    useContractWrite({
-      address: guestbookContractAddress,
-      abi: GuestbookABI.abi,
-      functionName: "setMessage",
-      args: [message],
-    });
+  const {
+    writeAsync: addMessage,
+    isLoading: isLoadingWrite,
+    isSuccess,
+  } = useContractWrite({
+    address: guestbookContractAddress,
+    abi: GuestbookABI.abi,
+    functionName: "setMessage",
+    args: [message],
+  });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -44,9 +49,11 @@ const Guestbook = () => {
     ) {
       alert("Unable to post");
     } else {
+      setIsSubmitting(true);
       const tx = await addMessage();
       await tx.wait();
       setMessage("");
+      setIsSubmitting(false);
       await refetchMessages();
     }
   };
@@ -101,7 +108,7 @@ const Guestbook = () => {
                   className="block mx-auto w-full px-4 py-4 mt-0 text-white placeholder-gray-500 transition-all duration-200 bg-black border-b border-b-custom-red rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                   maxLength={16}
                   onChange={(event) => setMessage(event.target.value)}
-                  disabled={isLoadingWrite}
+                  disabled={isSubmitting}
                   value={message}
                 />
               </div>
@@ -111,13 +118,14 @@ const Guestbook = () => {
                   console.log("re-fetching");
                   await refetchMessages();
                 }}
+                disabled={isSubmitting}
                 type="submit"
                 className="cursor-pointer inline-flex items-center justify-center px-6 py-3 mt-12 text-sm font-light leading-5 text-white transition-all duration-200 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white"
               >
                 Sign Guestbook
                 <div
                   className={`w-3 h-6 ml-2 mt-1 ${
-                    isLoadingWrite ? "animate-spin" : ""
+                    isSubmitting ? "animate-spin" : ""
                   }`}
                 >
                   {" "}
