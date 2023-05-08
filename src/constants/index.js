@@ -127,7 +127,7 @@ export const projects = [
     about:
       "A web application where users can share and discover artifical intelligence prompts from ChatGPT. I created it using Next.js - and used Next-Auth for user login, MongoDB for the database and Next.js's serverless backend API endpoints for GET, POST, PATCH and DELETE requests (CRUD)",
     tech: "#Next.js #Next-Auth #MongoDB #Tailwind",
-    url: "hhttps://ai-prompt-share-three.vercel.app/",
+    url: "https://ai-prompt-share-three.vercel.app/",
     github: "https://github.com/hayleyiscoding/ai-prompt-share",
     image: aiChat,
   },
