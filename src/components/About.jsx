@@ -43,7 +43,7 @@ const About = () => {
             </p>
             <div className="text-left">
               <a
-                href="https://docs.google.com/document/d/1lHoTErELU9S1_aOsUnKMKq04cCMyRBLEkbKAM9UyTIY/edit?usp=sharing"
+                href="https://drive.google.com/file/d/1gs4K8p-plYxD7LmKqT_GuCSU6Ht9Veir/view"
                 target="_blank"
                 className="cursor-pointer inline-flex items-center justify-center px-6 py-3 mt-12 text-sm font-semibold leading-5 text-white transition-all duration-200 bg-custom-red border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-black hover:text-white"
               >
