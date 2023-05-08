@@ -15,8 +15,8 @@ SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const Testimonials = () => {
   return (
-    <div id="testimonials" className="container mx-auto py-24">
-      <div className="text-center pt-0 md:mb-20">
+    <div id="testimonials" className="container mx-auto pt-10 lg:py-24">
+      <div className="text-center pt-0 mb-8 md:mb-20">
         <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
           <span className="relative inline-block">
             <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>

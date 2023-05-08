@@ -7,9 +7,9 @@ const CoreSkills = () => {
       id="core-skills"
       className="container mx-auto overflow-hidden bg-custom-black"
     >
-      <div className="py-24 pt-0">
-        <div className="text-center pt-20 mb-4 md:mb-12">
-          <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8 md:pb-8">
+      <div className="pb-20 pt-10 md:pt-0">
+        <div className="text-center mb-4 md:mb-12">
+          <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8 pb-8">
             <span className="relative inline-block">
               <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
               <span className="relative font-semibold">Core Skills</span>
@@ -17,11 +17,11 @@ const CoreSkills = () => {
             <br className="block sm:hidden" />
           </h2>
         </div>
-        <ul className="md:flex justify-center align-center gap-[3rem]">
+        <ul className="md:flex justify-center align-center gap-[3rem] pl-8 pr-3">
           {technologies.map((item, index) => (
             <li
               key={index}
-              className="custom-neumorphic-tech p-5 flex flex-col justify-center items-center w-[50%] mb-5 mx-auto md:w-[80%]"
+              className="custom-neumorphic-tech p-5 flex flex-col justify-center items-center mb-5 mx-auto w-[30%] md:w-[10%]"
             >
               <img
                 src={item.icon}

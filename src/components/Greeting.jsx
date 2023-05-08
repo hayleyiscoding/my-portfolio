@@ -41,7 +41,7 @@ const Greeting = (props) => {
                         .typeString(" Aren't these fireworks annoying?! ")
                         .pauseFor(2000)
                         .typeString(
-                          " Move your mouse cursor down to move them out the way!"
+                          " Move your mouse to move them out the way!"
                         )
                         .pauseFor(1500)
                         .typeString(" Or tap anywhere on mobile...")

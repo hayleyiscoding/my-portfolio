@@ -29,12 +29,12 @@ const Workshops = () => {
   const filteredWorkshops = workshops.filter(filterTable);
 
   return (
-    <section id="workshops" className="workshops">
-      <div className="container mx-auto py-12 sm:py-16 lg:py-20">
+    <section id="workshops" className="workshops pl-10">
+      <div className="container mx-auto py-10 lg:pb-4 lg:pt-4">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center sm:justify-between">
-            <div className="text-left pt-0 pb-6">
-              <h2 className=" mt-4 text-4xl md:text-5xl font-extralight text-white md:-mt-2">
+            <div className="text-left pt-0 pb-6 pl-2 ">
+              <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:-mt-2">
                 <span className="relative inline-block">
                   <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
                   <span className="relative font-semibold">Workshops</span>
@@ -88,34 +88,12 @@ const Workshops = () => {
                   Export to CSV
                 </button>
               </CSVLink>
-
-              {/* // Add sorting function in the future! */}
-
-              {/* <div className="inline-flex items-center justify-end pt-3 md-pt-0">
-                <label
-                  htmlFor="sort"
-                  className="text-base font-semibold text-white sm:text-sm mr-2"
-                >
-                  {" "}
-                  Sort:{" "}
-                </label>
-                <select
-                  id="sort"
-                  name="sort"
-                  onChange={handleSort}
-                  className="cursor-pointer block w-full bg-custom-black text-white py-1 md:py-2 pl-1 pr-10 text-normal font-semibold border-gray-300 border rounded-lg focus:outline-none focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm"
-                >
-                  <option value="default">Default</option>
-                  <option value="asc">A-Z (Topics)</option>
-                  <option value="desc">Z-A (Topics)</option>
-                </select>
-              </div> */}
             </div>
           </div>
 
           <div className="flex flex-col mt-4 lg:mt-8">
             <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div className="inline-block min-w-full pb-12 align-middle md:px-6 lg:px-8">
+              <div className="inline-block min-w-full lg:pb-12 align-middle md:px-6 lg:px-8">
                 <table className="min-w-full lg:divide-gray-200 lg:divide-y">
                   <thead className="hidden lg:table-header-group">
                     <tr>
@@ -149,7 +127,7 @@ const Workshops = () => {
                     <tbody className="">
                       {filteredWorkshops.map((workshop) => (
                         <tr key={workshop.id}>
-                          <td className="px-6 py-4 text-sm font-semibold text-white align-top lg:align-middle whitespace-nowrap">
+                          <td className="px-6 py-4 text-sm font-semibold text-white align-top lg:align-middle">
                             <div className="flex items-center">
                               {workshop.title}
                             </div>

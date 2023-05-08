@@ -5,9 +5,9 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="container experience lg:flex justify-around align-center mx-auto py-24 px-8"
+      className="container experience lg:flex justify-around align-center mx-auto pt-18 pb-20 px-8"
     >
-      <div className="text-center pt-0">
+      <div className="text-left pt-0 ml-3">
         <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
           <span className="relative inline-block">
             <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
@@ -17,7 +17,7 @@ const Work = () => {
         </h2>
       </div>
       <div className="col-1 w-full lg:w-[70%] p-5 mt-10">
-        <ol class="container relative border-l border-custom-red dark:border-gray-700 mx-auto max-w-7xl">
+        <ul class="container relative border-l border-custom-red dark:border-gray-700 mx-auto max-w-7xl">
           {workData.map((item) => (
             <li key={item.id} className="mb-10 ml-4">
               <div className="absolute w-3 h-3 bg-custom-red rounded-full -left-1.5 border border-white dark:border-custom-red dark:bg-gray-700"></div>
@@ -39,7 +39,7 @@ const Work = () => {
               </p>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   );

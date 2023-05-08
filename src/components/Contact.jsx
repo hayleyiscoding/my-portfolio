@@ -36,11 +36,11 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-10 bg-custom-black sm:py-16 lg:py-24 relative"
+      className="bg-custom-black md:py-10 lg:py-24 relative"
     >
       <div className=" container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="text-center pt-0 md:mb-12">
+          <div className="text-center pt-0 mb-8 md:mb-12">
             <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>

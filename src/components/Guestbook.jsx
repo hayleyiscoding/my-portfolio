@@ -52,7 +52,7 @@ const Guestbook = () => {
   };
 
   return (
-    <section id="guestbook" className="py-20">
+    <section id="guestbook" className="md:py-10 lg:py-20">
       <div className="container mx-auto bg-custom-black max-w-2xl p-12 pt-24 md:custom-neumorphic-tech lg:border-2 lg:border-white">
         <div className="text-center pt-0">
           <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">

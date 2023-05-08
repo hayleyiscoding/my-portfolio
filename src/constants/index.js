@@ -10,6 +10,7 @@ import bubbleBlowers from "../assets/projects/bubbleblowers.png";
 import ecommerce from "../assets/projects/ecommerce.png";
 import gravity from "../assets/projects/gravity.png";
 import portfolio from "../assets/projects/portfolio.png";
+import aiChat from "../assets/projects/aichat.png";
 import austinAvatar from "../assets/testimonials/austin-avatar.png";
 import sallyAvatar from "../assets/testimonials/sally-avatar.png";
 import matheusAvatar from "../assets/testimonials/matheus-avatar.png";
@@ -105,14 +106,6 @@ export const secondarySkillsData = [
     name: "SASS",
     icon: "SiSass",
   },
-  // {
-  //   id: 11,
-  //   name: "Zapier",
-  // },
-  // {
-  //   id: 12,
-  //   name: "Mailerlite",
-  // },
 ];
 
 export const projects = [
@@ -121,7 +114,7 @@ export const projects = [
     name: "My Portfolio",
     type: "Web2 / Web3",
     about:
-      "I had a lot of fun creating this portfolio website! I implemented neumorphic design with Tailwind CSS, React hooks, various libraries such as Masonry, CSS animations that are activated on scroll/hover, Email.js with error handling and fetched data from the Hashnode API using GraphQL.",
+      "I had a lot of fun creating this portfolio website! I Used Vite and implemented neumorphic design with Tailwind CSS, React hooks, various libraries such as Masonry, CSS animations that are activated on scroll/hover, Email.js with error handling and fetched data from the Hashnode API using GraphQL.",
     tech: "#React #HashnodeAPI #GraphQL #Tailwind",
     url: "https://hayleyiscoding.com",
     github: "https://github.com/hayleyiscoding/my-portfolio",
@@ -129,6 +122,18 @@ export const projects = [
   },
   {
     id: 2,
+    name: "AI Prompt Share",
+    type: "Web2",
+    about:
+      "A web application where users can share and discover artifical intelligence prompts from ChatGPT. I created it using Next.js - and used Next-Auth for user login, MongoDB for the database and Next.js's serverless backend API endpoints for GET, POST, PATCH and DELETE requests (CRUD)",
+    tech: "#Next.js #Next-Auth #MongoDB #Tailwind",
+    url: "hhttps://ai-prompt-share-three.vercel.app/",
+    github: "https://github.com/hayleyiscoding/ai-prompt-share",
+    image: aiChat,
+  },
+
+  {
+    id: 3,
     name: "The Online CoWork Lottery",
     type: "Web3",
     about:
@@ -139,7 +144,7 @@ export const projects = [
     image: onlineCoWorkLottery,
   },
   {
-    id: 3,
+    id: 4,
     name: "Crowdfunding dApp",
     type: "Web3",
     about:
@@ -150,36 +155,36 @@ export const projects = [
     image: crowdfunding,
   },
   {
-    id: 4,
+    id: 5,
     name: "BubbleBlowers Swim School",
     type: "Web2",
     about:
       "A one-page website that I created for a freelance client who runs a swim school. It includes connection to WhatsApp, Google Reviews and Google Maps. The client reported a large increase in student sign-ups after the website launch.",
     tech: "#HTML #CSS #Javascript",
-    url: "https://crowdfunding-tau-three.vercel.app/",
-    github: "https://github.com/hayleyiscoding/crowdfunding-blockchain-app",
+    url: "https://bubbleblowers.fun",
+    github: "https://github.com/hayleyiscoding/bubbleblowers",
     image: bubbleBlowers,
   },
   {
-    id: 5,
+    id: 6,
     name: "E-Commerce App",
     type: "Web2",
     about:
-      "An online clothing store that I created to practice React hooks and logic. Users can add their item/s to the cart (which pops out as a sidebar), sort the items by one size or multiple sizes, and flip the images to see the back and front views of the clothing.",
+      "The front-end of an online clothing store that I created to practice React hooks and logic. Users can add their item/s to the cart (which pops out as a sidebar), sort the items by one size or multiple sizes, and flip the images to see the back and front views of the clothing.",
     tech: "#React",
     url: "https://react-shopping-cart-azure.vercel.app/",
     github: "https://github.com/hayleyiscoding/react-shopping-cart",
     image: ecommerce,
   },
   {
-    id: 6,
+    id: 7,
     name: "Coding Gravity Animation",
     type: "Web2",
     about:
       "A fun animation that I created during my Javascript studies. In this animation, balls fall from the top of the viewport and bounce at the bottom of the viewport as if they are responding to gravity. I used the HTML Canvas element.",
     tech: "#Javascript #HTMLCanvas",
-    url: "https://react-shopping-cart-azure.vercel.app/",
-    github: "https://github.com/hayleyiscoding/react-shopping-cart",
+    url: "https://coding-gravity.vercel.app/",
+    github: "https://github.com/hayleyiscoding/coding-gravity",
     image: gravity,
   },
 ];

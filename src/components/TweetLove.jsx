@@ -39,7 +39,10 @@ const tweetImages = [
 
 const TweetLove = () => {
   return (
-    <section id="tweetlove" className="container mx-auto py-24">
+    <section
+      id="tweetlove"
+      className="container mx-auto py-10 lg:py-24 md:px-20"
+    >
       <div className="text-center pt-0 mb-20">
         <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
           <span className="relative inline-block">

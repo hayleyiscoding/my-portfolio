@@ -64,8 +64,8 @@ const Publications = () => {
 
   return (
     <section id="publications" className="bg-custom-black">
-      <div className="container mx-auto sm:px-6 lg:px-16 px-8 md:pt-24 lg:py-24">
-        <div className="text-left mb-24">
+      <div className="container mx-auto sm:px-6 lg:px-16 px-8 lg:py-12">
+        <div className=" text-center md:text-left mb-24 pl-4">
           <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8 mb-12">
             <span className="relative inline-block">
               <span className="absolute inline-block w-full bottom-0.5 h-2 bg-custom-red"></span>
@@ -75,10 +75,10 @@ const Publications = () => {
           </h2>
         </div>
 
-        <div className="max-w-5xl mx-auto mt-1 sm:mt-5 lg:mt-24 pb-5 lg:flex justify-between ">
+        <div className="mx-auto mt-1 sm:mt-5 lg:mt-24 pb-5 lg:flex justify-between ">
           <div className="-my-8 divide-y divide-gray-900">
             {data.user.publication.posts?.map((post, i) => (
-              <div key={post[i]} className="py-6 group">
+              <div key={post[i]} className="py-6 group md:pl-4 lg:pl-0">
                 <div className="sm:space-x-6 sm:items-start sm:flex">
                   <p className="text-md font-semibold tracking-widest text-white custom-text-shadow uppercase shrink-0">
                     {/* // Have to parse date string into date object -'new Date' */}
@@ -102,7 +102,7 @@ const Publications = () => {
               </div>
             ))}
           </div>
-          <div className="bg-[#C0c0c0] rotate-3 md:w-[35%] w-[60%] md:flex justify-center align-center rounded-xl ml-10 md:mx-auto mt-24 md:mt-[6rem] lg:-mt-10 ">
+          <div className="bg-[#C0c0c0] rotate-3 md:w-[30%] w-[60%] md:flex justify-center align-center rounded-xl ml-10 md:mx-auto mt-24 md:mt-[6rem] lg:-mt-10 ">
             <LazyLoadImage
               src={testimonial6}
               effect="blur"

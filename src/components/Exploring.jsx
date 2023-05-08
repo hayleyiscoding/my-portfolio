@@ -25,10 +25,7 @@ const Exploring = () => {
     SiSass,
   ];
   return (
-    <section
-      id="exploring"
-      className="container mx-auto py-20 lg:py-20 bg-custom-black"
-    >
+    <section id="exploring" className="container mx-auto py-5 bg-custom-black">
       <div className="py-19 px-12 lg:px-12">
         <div className="grid max-w-md mx-auto lg:max-w-none grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-4 lg:gap-y-2 place-items-center lg:grid-rows-4">
           {secondarySkillsData.slice(0, 4).map((item, i) => {

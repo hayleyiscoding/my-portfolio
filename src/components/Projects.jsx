@@ -6,7 +6,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 const Projects = () => {
   return (
     <section id="projects" className="projects">
-      <div className="container px-6 mx-auto py-24">
+      <div className="container md:px-6 mx-auto lg:py-8">
         <section className="text-white text-opacity-70 text-center">
           <h2 className="text-4xl md:text-5xl font-extralight text-white md:mt-3 text-center mb-8">
             <span className="relative inline-block">
@@ -15,7 +15,7 @@ const Projects = () => {
             </span>
             <br className="block sm:hidden" />
           </h2>
-          <p className="mt-12 mb-12 text-sm md:text-md font-light leading-6 text-white text-opacity-70 max-w-md mx-auto ">
+          <p className="mt-12 text-sm px-10 md:px-0 md:text-md font-light leading-6 text-white text-opacity-70 max-w-md mx-auto ">
             {" "}
             I have completed a number of projects - from a simple web2
             e-commerce app to full-stack decentralised apps built with
@@ -23,7 +23,7 @@ const Projects = () => {
             experience with Next.js, some Typescript and Solidity.
           </p>
 
-          <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12 text-sm md:text-md text-opacity-70">
+          <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12 text-sm md:text-md text-opacity-70 p-5">
             {projects.map((project) => (
               <div
                 key={project.id}
@@ -36,9 +36,9 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     effect="blur"
-                    className="text-white w-full rounded-t-lg grayscale contrast-200"
+                    className="text-white w-full rounded-t-lg grayscale contrast-600"
                   />
-                  <a href="#!">
+                  <a href={project.url} target="_blank">
                     <div
                       className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-100 transition duration-300 ease-in-out"
                       style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
