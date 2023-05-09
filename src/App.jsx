@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Intro />}></Route>
           <Route path="/home" element={<Home />}></Route>
-          <Route path="*" element={<Error404 />} />
+          {/* <Route path="*" element={<Error404 />} /> */}
         </Routes>
       </QueryClientProvider>
     </div>

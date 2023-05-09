@@ -1,0 +1,42 @@
+"filename", "language", "XML", "JavaScript JSX", "CSS", "JavaScript", "JSON", "Markdown", "HTML", "Solidity", "comment", "blank", "total"
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/README.md", "Markdown", 0, 0, 0, 0, 0, 10, 0, 0, 0, 4, 14
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/hardhat.config.cjs", "JavaScript", 0, 0, 0, 27, 0, 0, 0, 0, 1, 2, 30
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/index.html", "HTML", 0, 0, 0, 0, 0, 0, 76, 0, 0, 8, 84
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/package-lock.json", "JSON", 0, 0, 0, 0, 16938, 0, 0, 0, 0, 1, 16939
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/package.json", "JSON", 0, 0, 0, 0, 54, 0, 0, 0, 0, 1, 55
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/postcss.config.js", "JavaScript", 0, 0, 0, 6, 0, 0, 0, 0, 0, 1, 7
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/scripts/deploy.js", "JavaScript", 0, 0, 0, 5, 0, 0, 0, 0, 6, 3, 14
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/App.css", "CSS", 0, 0, 35, 0, 0, 0, 0, 0, 0, 6, 41
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/App.jsx", "JavaScript JSX", 0, 21, 0, 0, 0, 0, 0, 0, 0, 5, 26
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/assets/abi/Guestbook.json", "JSON", 0, 0, 0, 0, 89, 0, 0, 0, 0, 1, 90
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/assets/abi/contracts/Guestbook.sol", "Solidity", 0, 0, 0, 0, 0, 0, 0, 20, 1, 8, 29
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/assets/react.svg", "XML", 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/assets/tech/threejs.svg", "XML", 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/404.jsx", "JavaScript JSX", 0, 21, 0, 0, 0, 0, 0, 0, 0, 4, 25
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/About.jsx", "JavaScript JSX", 0, 95, 0, 0, 0, 0, 0, 0, 0, 6, 101
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Achievements.jsx", "JavaScript JSX", 0, 44, 0, 0, 0, 0, 0, 0, 38, 4, 86
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Contact.jsx", "JavaScript JSX", 0, 210, 0, 0, 0, 0, 0, 0, 1, 13, 224
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/CoreSkills.jsx", "JavaScript JSX", 0, 41, 0, 0, 0, 0, 0, 0, 0, 3, 44
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Education.jsx", "JavaScript JSX", 0, 45, 0, 0, 0, 0, 0, 0, 0, 4, 49
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Exploring.jsx", "JavaScript JSX", 0, 83, 0, 0, 0, 0, 0, 0, 0, 5, 88
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Footer.jsx", "JavaScript JSX", 0, 74, 0, 0, 0, 0, 0, 0, 0, 7, 81
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Greeting.jsx", "JavaScript JSX", 0, 97, 0, 0, 0, 0, 0, 0, 0, 7, 104
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Guestbook.jsx", "JavaScript JSX", 0, 155, 0, 0, 0, 0, 0, 0, 2, 13, 170
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Home.jsx", "JavaScript JSX", 0, 40, 0, 0, 0, 0, 0, 0, 0, 3, 43
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Intro.jsx", "JavaScript JSX", 0, 143, 0, 0, 0, 0, 0, 0, 0, 7, 150
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Loader.jsx", "JavaScript JSX", 0, 15, 0, 0, 0, 0, 0, 0, 0, 3, 18
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Navbar.jsx", "JavaScript JSX", 0, 288, 0, 0, 0, 0, 0, 0, 1, 22, 311
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Presentations.jsx", "JavaScript JSX", 0, 58, 0, 0, 0, 0, 0, 0, 0, 4, 62
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Projects.jsx", "JavaScript JSX", 0, 121, 0, 0, 0, 0, 0, 0, 0, 4, 125
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Publications.jsx", "JavaScript JSX", 0, 142, 0, 0, 0, 0, 0, 0, 1, 13, 156
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Testimonials.jsx", "JavaScript JSX", 0, 69, 0, 0, 0, 0, 0, 0, 0, 5, 74
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/TweetLove.jsx", "JavaScript JSX", 0, 75, 0, 0, 0, 0, 0, 0, 0, 5, 80
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Work.jsx", "JavaScript JSX", 0, 45, 0, 0, 0, 0, 0, 0, 0, 4, 49
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/components/Workshops.jsx", "JavaScript JSX", 0, 198, 0, 0, 0, 0, 0, 0, 1, 26, 225
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/constants/index.js", "JavaScript", 0, 0, 0, 514, 0, 0, 0, 0, 45, 12, 571
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/index.css", "CSS", 0, 0, 265, 0, 0, 0, 0, 0, 11, 46, 322
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/src/main.jsx", "JavaScript JSX", 0, 36, 0, 0, 0, 0, 0, 0, 0, 6, 42
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/tailwind.config.js", "JavaScript", 0, 0, 0, 15, 0, 0, 0, 0, 1, 2, 18
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/vercel.json", "JSON", 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/Users/hayley/Documents/hayley-is-coding/portfolio2/my-simple-portfolio/vite.config.js", "JavaScript", 0, 0, 0, 8, 0, 0, 0, 0, 1, 2, 11
+"Total", "-", 2, 2116, 300, 575, 17082, 10, 76, 20, 110, 271, 20562
