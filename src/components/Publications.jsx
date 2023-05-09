@@ -108,8 +108,8 @@ const Publications = () => {
             </div>
           ) : (
             <div className="-my-8 divide-y divide-gray-900">
-              {
-                publications.map((post, i) => (
+              {publications
+                .map((post, i) => (
                   <div key={post[i]} className="py-6 group md:pl-4 lg:pl-0">
                     <div className="sm:space-x-6 sm:items-start sm:flex">
                       <p className="text-md font-semibold tracking-widest text-white custom-text-shadow uppercase shrink-0">
@@ -128,8 +128,8 @@ const Publications = () => {
                       </p>
                     </div>
                   </div>
-                )).reverse
-              }
+                ))
+                .reverse()}
             </div>
           )}
           <div className="bg-[#C0c0c0] rotate-3 md:w-[30%] w-[60%] md:flex justify-center align-center rounded-xl ml-10 md:mx-auto mt-24 md:mt-[6rem] lg:-mt-10 ">
