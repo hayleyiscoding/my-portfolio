@@ -189,46 +189,46 @@ export const projects = [
   },
 ];
 
-// export const publications = [
-//   {
-//     id: 1,
-//     date: "Aug 14, 2022",
-//     title: "Storing Data on IPFS using Web3.Storage",
-//     featured: "",
-//     url: "https://hayleyiscoding.hashnode.dev/storing-data-on-ipfs-using-web3storage",
-//   },
-//   {
-//     id: 2,
-//     date: "Aug 9, 2022",
-//     title: `Add a 'Connect Wallet' Button to Your Website - Next.js,
-//     and RainbowKit Edition`,
-//     featured: "",
-//     url: "https://hayleyiscoding.hashnode.dev/add-a-connect-wallet-button-to-your-website-nextjs-and-rainbowkit-edition",
-//   },
-//   {
-//     id: 3,
-//     date: "Aug 8, 2022",
-//     title: `Add a 'Connect Wallet' Button to Your Website - Vanilla JS
-//     Edition`,
-//     featured: "",
-//     url: "https://hayleyiscoding.hashnode.dev/add-a-connect-wallet-button-to-your-website-vanilla-js-edition",
-//   },
-//   {
-//     id: 4,
-//     date: "Aug 3, 2022",
-//     title: `Write Your First Solidity Smart Contract in the Next 10
-//     Minutes`,
-//     featured: "",
-//     url: "https://hayleyiscoding.hashnode.dev/write-your-first-solidity-smart-contract-in-the-next-10-minutes",
-//   },
-//   {
-//     id: 5,
-//     date: "Aug 3, 2022",
-//     title: `Web 3 for Beginners`,
-//     featured: "** Featured on Hashnode",
-//     url: "https://hayleyiscoding.hashnode.dev/web-3-for-beginners",
-//   },
-// ];
+export const publications = [
+  {
+    id: 1,
+    date: "Aug 14, 2022",
+    title: "Storing Data on IPFS using Web3.Storage",
+    featured: "",
+    url: "https://hayleyiscoding.hashnode.dev/storing-data-on-ipfs-using-web3storage",
+  },
+  {
+    id: 2,
+    date: "Aug 9, 2022",
+    title: `Add a 'Connect Wallet' Button to Your Website - Next.js,
+    and RainbowKit Edition`,
+    featured: "",
+    url: "https://hayleyiscoding.hashnode.dev/add-a-connect-wallet-button-to-your-website-nextjs-and-rainbowkit-edition",
+  },
+  {
+    id: 3,
+    date: "Aug 8, 2022",
+    title: `Add a 'Connect Wallet' Button to Your Website - Vanilla JS
+    Edition`,
+    featured: "",
+    url: "https://hayleyiscoding.hashnode.dev/add-a-connect-wallet-button-to-your-website-vanilla-js-edition",
+  },
+  {
+    id: 4,
+    date: "Aug 3, 2022",
+    title: `Write Your First Solidity Smart Contract in the Next 10
+    Minutes`,
+    featured: "",
+    url: "https://hayleyiscoding.hashnode.dev/write-your-first-solidity-smart-contract-in-the-next-10-minutes",
+  },
+  {
+    id: 5,
+    date: "Aug 3, 2022",
+    title: `Web 3 for Beginners`,
+    featured: "** Featured on Hashnode",
+    url: "https://hayleyiscoding.hashnode.dev/web-3-for-beginners",
+  },
+];
 
 export const educationData = [
   {

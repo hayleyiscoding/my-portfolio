@@ -9,6 +9,7 @@ import "animate.css";
 import { format } from "date-fns";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { publications } from "../constants";
 
 const endpoint = "https://api.hashnode.com/";
 
@@ -25,6 +26,8 @@ const ARTICLE_QUERY = `
       }
     }
   }`;
+
+console.log({ ARTICLE_QUERY });
 
 const Publications = () => {
   const [animate, setAnimate] = useState(false);
@@ -76,32 +79,56 @@ const Publications = () => {
         </div>
 
         <div className="mx-auto mt-1 sm:mt-5 lg:mt-24 pb-5 lg:flex justify-between ">
-          <div className="-my-8 divide-y divide-gray-900">
-            {data.user?.publication.posts?.map((post, i) => (
-              <div key={post[i]} className="py-6 group md:pl-4 lg:pl-0">
-                <div className="sm:space-x-6 sm:items-start sm:flex">
-                  <p className="text-md font-semibold tracking-widest text-white custom-text-shadow uppercase shrink-0">
-                    {/* // Have to parse date string into date object -'new Date' */}
-                    {format(new Date(post.dateAdded), "d MMM yyyy")}
-                  </p>
-                  <p className="mt-4 text-md font-light text-white text-opacity-70 transition-all duration-200 transform sm:mt-0 group-hover:translate-x-1">
-                    <a
-                      href={`https://hayleyiscoding.hashnode.dev/${post.slug}`}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      {" "}
-                      {post.title}
-                      <span className="custom-superscript font-normal custom-text-shadow ">
-                        &nbsp;{" "}
-                        {post.dateFeatured ? "* Featured on Hashnode" : ""}
-                      </span>
-                    </a>
-                  </p>
+          {data.user ? (
+            <div className="-my-8 divide-y divide-gray-900">
+              {data.user?.publication.posts?.map((post, i) => (
+                <div key={post[i]} className="py-6 group md:pl-4 lg:pl-0">
+                  <div className="sm:space-x-6 sm:items-start sm:flex">
+                    <p className="text-md font-semibold tracking-widest text-white custom-text-shadow uppercase shrink-0">
+                      {/* // Have to parse date string into date object -'new Date' */}
+                      {format(new Date(post.dateAdded), "d MMM yyyy")}
+                    </p>
+                    <p className="mt-4 text-md font-light text-white text-opacity-70 transition-all duration-200 transform sm:mt-0 group-hover:translate-x-1">
+                      <a
+                        href={`https://hayleyiscoding.hashnode.dev/${post.slug}`}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        {" "}
+                        {post.title}
+                        <span className="custom-superscript font-normal custom-text-shadow ">
+                          &nbsp;{" "}
+                          {post.dateFeatured ? "* Featured on Hashnode" : ""}
+                        </span>
+                      </a>
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="-my-8 divide-y divide-gray-900">
+              {publications.map((post, i) => (
+                <div key={post[i]} className="py-6 group md:pl-4 lg:pl-0">
+                  <div className="sm:space-x-6 sm:items-start sm:flex">
+                    <p className="text-md font-semibold tracking-widest text-white custom-text-shadow uppercase shrink-0">
+                      {/* // Have to parse date string into date object -'new Date' */}
+                      {format(new Date(post.date), "d MMM yyyy")}
+                    </p>
+                    <p className="mt-4 text-md font-light text-white text-opacity-70 transition-all duration-200 transform sm:mt-0 group-hover:translate-x-1">
+                      <a href={post.url} target="_blank" rel="noopener">
+                        {" "}
+                        {post.title}
+                        <span className="custom-superscript font-normal custom-text-shadow ">
+                          &nbsp; {post.featured ? "* Featured on Hashnode" : ""}
+                        </span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
           <div className="bg-[#C0c0c0] rotate-3 md:w-[30%] w-[60%] md:flex justify-center align-center rounded-xl ml-10 md:mx-auto mt-24 md:mt-[6rem] lg:-mt-10 ">
             <LazyLoadImage
               src={testimonial6}
