@@ -77,7 +77,7 @@ const Publications = () => {
 
         <div className="mx-auto mt-1 sm:mt-5 lg:mt-24 pb-5 lg:flex justify-between ">
           <div className="-my-8 divide-y divide-gray-900">
-            {data.user.publication.posts?.map((post, i) => (
+            {data.user?.publication.posts?.map((post, i) => (
               <div key={post[i]} className="py-6 group md:pl-4 lg:pl-0">
                 <div className="sm:space-x-6 sm:items-start sm:flex">
                   <p className="text-md font-semibold tracking-widest text-white custom-text-shadow uppercase shrink-0">
