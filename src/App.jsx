@@ -5,7 +5,9 @@ import Error404 from "./components/404";
 import Home from "./components/Home";
 import ReactGA from "react-ga";
 
-ReactGA.initialize(process.env.VITE_GOOGLE_ANALYTICS_ID);
+const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
+
+ReactGA.initialize(TRACKING_ID);
 
 import { QueryClient, QueryClientProvider } from "react-query";
 
