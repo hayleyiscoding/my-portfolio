@@ -5,7 +5,7 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="container experience lg:flex justify-between align-center mx-auto pt-18 pb-20 px-8"
+      className="container experience lg:flex justify-around align-center mx-auto pt-18 pb-20 px-8"
     >
       <div className="text-left pt-0 ml-3">
         <h2 className="mt-4 text-4xl md:text-5xl font-extralight text-white md:mt-8">
@@ -16,7 +16,7 @@ const Work = () => {
           <br className="block sm:hidden" />
         </h2>
       </div>
-      <div className="col-1 w-full lg:w-[70%] p-5 mt-10">
+      <div className="col-1 w-full lg:w-[70%] p-5 mt-10 lg:pl-12">
         <ul class="container relative border-l border-custom-red dark:border-gray-700 mx-auto max-w-7xl">
           {workData.map((item) => (
             <li key={item.id} className="mb-10 ml-4">
