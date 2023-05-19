@@ -187,4 +187,3 @@ For support, you can email me at hayleyiscoding (@) gmail.com.
 Twitter: https://twitter.com/hayleyiscoding
 
 LinkedIn: https://www.linkedin.com/in/hayleyiscoding/
-git a
